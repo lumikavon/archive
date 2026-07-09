@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[user]
+	name = Codex
+	email = codex@local
+[remote "origin"]
+	url = https://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@github.com/lumikavon/archive.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
