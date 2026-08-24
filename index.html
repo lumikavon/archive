@@ -2158,7 +2158,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
             </label>
           </div>
           <div id="file-tree-container">
-            <div class="empty">扫描完成后，这里会显示当前目录及子目录中的 Markdown 文件。</div>
+            <div class="empty">扫描完成后，这里会显示 GitHub 仓库中的 Markdown 文件。</div>
           </div>
         </div>
       </aside>
@@ -2173,13 +2173,13 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
             <div class="doc-tag-row" aria-hidden="true">
               <span>Markdown</span>
               <span>Reader</span>
-              <span>Local</span>
+              <span>GitHub Pages</span>
             </div>
             <h2 id="doc-title">等待加载文档</h2>
           </div>
           <article class="markdown-body" id="markdown-content">
             <div class="empty">
-              页面会从当前目录开始递归读取 Nginx 目录索引，构建左侧文件树。
+              页面会读取 GitHub 仓库文件树，构建左侧 Markdown 文件树。
             </div>
           </article>
         </div>
@@ -2656,10 +2656,15 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
         },
       };
 
+      const githubRepository = Object.freeze({
+        owner: "lumikavon",
+        name: "archive",
+        branch: "main",
+      });
+
       const state = {
-        rootUrl: new URL("./", window.location.href),
-        rootPath: "",
-        visitedDirs: new Set(),
+        repository: githubRepository,
+        contentBaseUrl: new URL("https://raw.githubusercontent.com/" + githubRepository.owner + "/" + githubRepository.name + "/" + githubRepository.branch + "/"),
         fileTree: null,
         files: [],
         filteredFiles: [],
@@ -2723,7 +2728,6 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
         outlineCollapser: document.getElementById("outline-collapser"),
       };
 
-      const domParser = new DOMParser();
       let headingObserver = null;
 
       setupRenderer();
@@ -3316,8 +3320,7 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
       }
 
       async function boot() {
-        state.rootPath = decodeURIComponent(state.rootUrl.pathname);
-        refs.rootLabel.textContent = state.rootPath;
+        refs.rootLabel.textContent = state.repository.owner + "/" + state.repository.name + " @ " + state.repository.branch;
         await scanAndRender(false);
       }
 
@@ -3325,8 +3328,7 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
         const scanToken = ++state.titleIndexToken;
         persistCurrentReadingPosition();
 
-        setStatus("正在扫描目录索引…");
-        state.visitedDirs.clear();
+        setStatus("正在读取 GitHub 文件树…");
         state.errors = [];
         state.fileMetadata.clear();
         state.currentHeadings = [];
@@ -3335,7 +3337,7 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
         setOutlineMessage("加载文档后，这里会显示标题大纲。", true);
 
         try {
-          const tree = await walkDirectory(state.rootUrl, "");
+          const tree = await loadRepositoryTree();
           state.fileTree = tree;
           state.files = flattenFiles(tree);
           pruneStoredDocumentState(tree, state.files);
@@ -3349,7 +3351,7 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
             removeStoredActiveFilePath();
             refs.markdownContent.innerHTML = '<div class="empty">当前目录及子目录中没有发现 `.md` 或 `.markdown` 文件。</div>';
             refs.docTitle.textContent = "未发现 Markdown";
-            refs.docPath.textContent = "请确认 Nginx autoindex 已开启，并且目录下存在 Markdown 文件。";
+            refs.docPath.textContent = "请确认 main 分支中存在 .md 或 .markdown 文件。";
             updateFileNavigationControls();
             if (state.errors.length) {
               renderBanners();
@@ -3376,170 +3378,106 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
           setStatus("扫描完成，已发现 " + state.files.length + " 个 Markdown 文件");
         } catch (error) {
           console.error(error);
-          refs.fileTreeContainer.innerHTML = '<div class="error-box">目录扫描失败：' + escapeHtml(error.message) + "</div>";
-          refs.markdownContent.innerHTML = '<div class="error-box">无法构建文件树，请确认页面正通过 Nginx 目录索引访问，而不是直接双击本地文件。</div>';
+          refs.fileTreeContainer.innerHTML = '<div class="error-box">GitHub 文件树读取失败：' + escapeHtml(error.message) + "</div>";
+          refs.markdownContent.innerHTML = '<div class="error-box">无法读取 GitHub 仓库内容。请确认仓库为公开仓库，并检查网络连接。</div>';
           refs.docTitle.textContent = "扫描失败";
           refs.docPath.textContent = error.message;
           setStatus("扫描失败");
         }
       }
 
-      async function walkDirectory(dirUrl, relativeDirPath) {
-        const normalizedKey = normalizeDirectoryUrl(dirUrl);
-        if (state.visitedDirs.has(normalizedKey)) {
-          return {
-            type: "dir",
-            name: relativeDirPath ? getBaseName(relativeDirPath) : ".",
-            path: relativeDirPath,
-            url: dirUrl.href,
-            children: [],
-          };
-        }
-        state.visitedDirs.add(normalizedKey);
-
-        const response = await fetch(dirUrl.href, { cache: "no-store" });
-        if (!response.ok) {
-          throw new Error("无法读取目录索引：" + dirUrl.href + " (" + response.status + ")");
-        }
-
-        const html = await response.text();
-        const entries = parseDirectoryListing(html, dirUrl);
-        const dirs = [];
-        const files = [];
-
-        for (const entry of entries) {
-          if (entry.type === "dir") {
-            dirs.push(entry);
-          } else if (entry.type === "file") {
-            files.push(entry);
-          }
-        }
-
-        dirs.sort(byName);
-        files.sort(byName);
-
-        const childNodes = [];
-
-        for (const dir of dirs) {
-          try {
-            const child = await walkDirectory(dir.url, dir.path);
-            if (!child.children.length) {
-              continue;
-            }
-            child.name = dir.name;
-            child.path = dir.path;
-            child.url = dir.url.href;
-            childNodes.push(child);
-          } catch (error) {
-            state.errors.push("目录读取失败：" + dir.path + " - " + error.message);
-          }
-        }
-
-        for (const file of files) {
-          childNodes.push({
-            type: "file",
-            name: file.name,
-            path: file.path,
-            url: file.url.href,
-          });
-        }
-
-        childNodes.sort((a, b) => {
-          if (a.type !== b.type) {
-            return a.type === "dir" ? -1 : 1;
-          }
-          return a.name.localeCompare(b.name, "zh-CN", { sensitivity: "base", numeric: true });
+      async function loadRepositoryTree() {
+        const apiUrl = "https://api.github.com/repos/"
+          + encodeURIComponent(state.repository.owner)
+          + "/"
+          + encodeURIComponent(state.repository.name)
+          + "/git/trees/"
+          + encodeURIComponent(state.repository.branch)
+          + "?recursive=1";
+        const response = await fetch(apiUrl, {
+          cache: "no-store",
+          headers: { Accept: "application/vnd.github+json" },
         });
 
-        return {
-          type: "dir",
-          name: relativeDirPath ? getBaseName(relativeDirPath) : ".",
-          path: relativeDirPath,
-          url: dirUrl.href,
-          children: childNodes,
-        };
+        if (!response.ok) {
+          throw new Error("GitHub API 返回 " + response.status);
+        }
+
+        const payload = await response.json();
+        if (payload.truncated) {
+          throw new Error("仓库文件过多，GitHub 未能返回完整文件树");
+        }
+
+        const markdownFiles = (Array.isArray(payload.tree) ? payload.tree : [])
+          .filter((entry) => entry.type === "blob" && /\.md(?:own)?$/i.test(entry.path || ""))
+          .map((entry) => String(entry.path))
+          .sort((left, right) => left.localeCompare(right, "zh-CN", { sensitivity: "base", numeric: true }));
+
+        return buildRepositoryFileTree(markdownFiles);
       }
 
-      function parseDirectoryListing(html, dirUrl) {
-        const doc = domParser.parseFromString(html, "text/html");
-        const anchors = Array.from(doc.querySelectorAll("a[href]"));
-        const seen = new Set();
-        const entries = [];
+      function buildRepositoryFileTree(paths) {
+        const root = {
+          type: "dir",
+          name: ".",
+          path: "",
+          url: state.contentBaseUrl.href,
+          children: [],
+        };
+        const directories = new Map([["", root]]);
 
-        for (const anchor of anchors) {
-          const href = anchor.getAttribute("href");
-          if (!href || href === "../" || href === "./") {
-            continue;
-          }
-          if (href.startsWith("?") || href.startsWith("#")) {
-            continue;
-          }
+        for (const path of paths) {
+          const parts = path.split("/");
+          let parentPath = "";
+          let parent = root;
 
-          let resolved;
-          try {
-            resolved = new URL(href, dirUrl.href);
-          } catch (error) {
-            continue;
-          }
-
-          if (resolved.origin !== state.rootUrl.origin) {
-            continue;
-          }
-
-          if (!resolved.pathname.startsWith(state.rootUrl.pathname)) {
-            continue;
-          }
-
-          if (resolved.search || resolved.hash) {
-            resolved.search = "";
-            resolved.hash = "";
-          }
-
-          const relative = getRelativePath(resolved);
-          if (!relative || relative.startsWith("../")) {
-            continue;
-          }
-
-          const text = (anchor.textContent || "").trim();
-          const looksLikeDir = href.endsWith("/") || text.endsWith("/");
-
-          if (looksLikeDir) {
-            const dirPath = stripTrailingSlash(relative);
-            if (!dirPath) {
-              continue;
+          for (const segment of parts.slice(0, -1)) {
+            const directoryPath = parentPath ? parentPath + "/" + segment : segment;
+            let directory = directories.get(directoryPath);
+            if (!directory) {
+              directory = {
+                type: "dir",
+                name: segment,
+                path: directoryPath,
+                url: getRepositoryContentUrl(directoryPath + "/").href,
+                children: [],
+              };
+              directories.set(directoryPath, directory);
+              parent.children.push(directory);
             }
-            const key = "dir:" + dirPath;
-            if (seen.has(key)) {
-              continue;
-            }
-            seen.add(key);
-            entries.push({
-              type: "dir",
-              name: getBaseName(dirPath),
-              path: dirPath,
-              url: new URL(ensureTrailingSlash(relative), state.rootUrl),
-            });
-            continue;
+            parent = directory;
+            parentPath = directoryPath;
           }
 
-          if (!/\.md(?:own)?$/i.test(relative)) {
-            continue;
-          }
-
-          const key = "file:" + relative;
-          if (seen.has(key)) {
-            continue;
-          }
-          seen.add(key);
-          entries.push({
+          parent.children.push({
             type: "file",
-            name: getBaseName(relative),
-            path: relative,
-            url: new URL(relative, state.rootUrl),
+            name: parts[parts.length - 1],
+            path,
+            url: getRepositoryContentUrl(path).href,
           });
         }
 
-        return entries;
+        sortRepositoryTree(root);
+        return root;
+      }
+
+      function sortRepositoryTree(node) {
+        node.children.sort((left, right) => {
+          if (left.type !== right.type) {
+            return left.type === "dir" ? -1 : 1;
+          }
+          return left.name.localeCompare(right.name, "zh-CN", { sensitivity: "base", numeric: true });
+        });
+        node.children.filter((child) => child.type === "dir").forEach(sortRepositoryTree);
+      }
+
+      function getRepositoryContentUrl(path) {
+        const encodedPath = String(path)
+          .split("/")
+          .filter(Boolean)
+          .map((segment) => encodeURIComponent(segment))
+          .join("/");
+        return new URL(encodedPath, state.contentBaseUrl);
       }
 
       function renderFileTree(tree, emptyMessage) {
@@ -3966,10 +3904,10 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
           }
           if (!isAbsoluteLike(href)) {
             const resolved = new URL(href, baseUrl);
-            const relative = getRelativePath(resolved);
+            const relative = getRepositoryRelativePath(resolved);
             anchor.href = resolved.href;
 
-            if (relative && /\.md(?:own)?$/i.test(relative) && resolved.pathname.startsWith(state.rootUrl.pathname)) {
+            if (relative && /\.md(?:own)?$/i.test(relative)) {
               anchor.addEventListener("click", (event) => {
                 event.preventDefault();
                 const target = state.files.find((candidate) => candidate.path === relative);
@@ -4783,33 +4721,16 @@ hljs.registerLanguage("x86asm",function(){"use strict";return function(s){return
         return /^(?:[a-z]+:)?\/\//i.test(value) || value.startsWith("data:") || value.startsWith("mailto:") || value.startsWith("tel:");
       }
 
-      function normalizeDirectoryUrl(url) {
-        const normalized = new URL(url.href);
-        normalized.search = "";
-        normalized.hash = "";
-        normalized.pathname = ensureTrailingSlash(normalized.pathname);
-        return normalized.href;
-      }
-
-      function getRelativePath(url) {
-        const pathname = decodeURIComponent(url.pathname);
-        const rootPath = decodeURIComponent(state.rootUrl.pathname);
-        if (!pathname.startsWith(rootPath)) {
+      function getRepositoryRelativePath(url) {
+        if (url.origin !== state.contentBaseUrl.origin) {
           return "";
         }
-        return pathname.slice(rootPath.length).replace(/^\/+/, "");
-      }
-
-      function byName(a, b) {
-        return a.name.localeCompare(b.name, "zh-CN", { sensitivity: "base", numeric: true });
-      }
-
-      function stripTrailingSlash(value) {
-        return value.replace(/\/+$/, "");
-      }
-
-      function ensureTrailingSlash(value) {
-        return value.endsWith("/") ? value : value + "/";
+        const pathname = decodeURIComponent(url.pathname);
+        const contentPath = decodeURIComponent(state.contentBaseUrl.pathname);
+        if (!pathname.startsWith(contentPath)) {
+          return "";
+        }
+        return pathname.slice(contentPath.length).replace(/^\/+/, "");
       }
 
       function getBaseName(path) {
