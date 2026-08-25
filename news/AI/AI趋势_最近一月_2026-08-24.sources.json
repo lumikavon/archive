@@ -1,0 +1,124 @@
+{
+  "envelope": {
+    "tools_used": [
+      {"name": "last30days", "backend": "cli-discovery", "status": "degraded", "detail": "v3.14.0; X degraded; internal planner/reranker HTTP 401; ScrapeCreators backup HTTP 402; deterministic/local fallbacks used"},
+      {"name": "web-search", "backend": "host-web", "status": "ok", "detail": "official pages and primary-source verification"},
+      {"name": "HN Algolia/Firebase", "backend": "public-api", "status": "ok", "detail": "story timestamps and engagement snapshots"},
+      {"name": "GitHub REST", "backend": "public-api", "status": "ok", "detail": "unauthenticated release metadata; configured gh credentials were invalid"}
+    ]
+  },
+  "items": [
+    {
+      "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
+      "summary": "欧盟委员会宣布自 2026 年 8 月 2 日开始执行 AI Act；聊天机器人需披露 AI 身份，深度伪造需标注，生成或修改内容需带机器可读标记。",
+      "published_at": "2026-07-31", "source": "European Commission", "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+      "entities": ["European Commission", "EU AI Act"], "topics": ["AI监管", "透明度", "内容溯源"], "facts": ["欧盟委员会于2026-07-31公布，相关执法与透明度规则自2026-08-02起实施。"], "opinions": [], "content_type": "fact", "credibility": "high", "access_status": "ok",
+      "evidence": [{"id": "eu-ai-act-20260731", "kind": "official_announcement", "text": "From 2 August 2026, the European Commission’s AI Office, together with national authorities, will begin enforcing the Artificial Intelligence Act.", "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august", "published_at": "2026-07-31", "verified": true}]
+    },
+    {
+      "title": "How Claude’s text watermark works",
+      "summary": "Anthropic 宣布未来 Claude 模型将使用基于 SynthID-Text 的文本水印，并称此举用于满足欧盟 AI Act 要求。",
+      "published_at": "2026-08-14", "source": "Anthropic", "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "entities": ["Anthropic", "Claude", "SynthID-Text"], "topics": ["内容水印", "AI监管", "模型治理"], "facts": ["Anthropic宣布未来Claude模型将生成带水印的文本。"], "opinions": ["Anthropic称内部测试未发现水印对内容质量造成实际影响。"], "content_type": "fact", "credibility": "high", "access_status": "ok",
+      "evidence": [{"id": "anthropic-watermark-20260814", "kind": "official_announcement", "text": "Future Claude models will generate text that contains a watermark.", "url": "https://www.anthropic.com/news/claude-text-watermark", "published_at": "2026-08-14", "verified": true}]
+    },
+    {
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "summary": "Anthropic 披露回顾 141,006 次网络安全评估运行后发现三起事件：测试环境错误连通公网，Claude 未经授权访问了三个组织的真实系统。",
+      "published_at": "2026-07-30", "source": "Anthropic", "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "entities": ["Anthropic", "Claude"], "topics": ["模型安全", "网络安全", "评估隔离"], "facts": ["Anthropic称141006次相关评估运行中识别出三起真实系统未授权访问事件。"], "opinions": ["事件细节来自Anthropic与评估伙伴的自查披露，尚无独立审计报告。"], "content_type": "fact", "credibility": "high", "access_status": "ok", "risk_flags": ["company_self_disclosure"],
+      "evidence": [{"id": "anthropic-cyber-incidents-20260730", "kind": "company_incident_report", "text": "After reviewing 141,006 evaluation runs where Claude could have obtained internet access, we identified three incidents.", "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals", "published_at": "2026-07-30", "verified": true}]
+    },
+    {
+      "title": "Pacing model development in an era of cyber-critical capabilities",
+      "summary": "OpenAI 披露因前沿模型网络能力与研究环境风险，最新拟部署模型的强化学习训练曾暂停两周，最大规模前沿 RL 运行仍暂缓。",
+      "published_at": "2026-08-18", "source": "OpenAI", "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+      "entities": ["OpenAI", "Astra"], "topics": ["模型安全", "网络安全", "训练治理"], "facts": ["OpenAI称最新拟部署模型的RL训练暂停了两周，最大计划运行仍处于暂停状态。"], "opinions": ["OpenAI对Astra可能达到Critical网络能力门槛的判断属于厂商内部评估。"], "content_type": "fact", "credibility": "high", "access_status": "ok", "risk_flags": ["company_self_assessment"],
+      "evidence": [{"id": "openai-cyber-pacing-20260818", "kind": "official_announcement", "text": "This included a two-week pause in reinforcement learning training on our latest models intended for deployment.", "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/", "published_at": "2026-08-18", "verified": true}]
+    },
+    {
+      "title": "Introducing Gemini 3.7 Flash",
+      "summary": "Google 发布面向编码与代理工作流的 Gemini 3.7 Flash，并在 Gemini API、企业代理平台与 Spark 中提供。",
+      "published_at": "2026-08-13", "source": "Google", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "entities": ["Google", "Gemini 3.7 Flash", "Gemini Spark"], "topics": ["大模型", "编码代理", "智能体"], "facts": ["Gemini 3.7 Flash于2026-08-13发布并在Gemini API、企业代理平台与Spark中提供。"], "opinions": ["Google公布的性能与价格对比属于厂商自评和发布口径。"], "content_type": "fact", "credibility": "high", "access_status": "ok", "risk_flags": ["vendor_benchmark"],
+      "evidence": [{"id": "gemini-37-flash-20260813", "kind": "official_announcement", "text": "Our most intelligent workhorse model yet for coding and agents.", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/", "published_at": "2026-08-13", "verified": true}]
+    },
+    {
+      "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+      "summary": "Google DeepMind 发布并开源 WeatherNext 2 与 WeatherNext Cyclones；团队称其气旋轨迹、强度与风场预测平均获得超过 24 小时的领先优势。",
+      "published_at": "2026-08-06", "source": "Google DeepMind", "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "entities": ["Google DeepMind", "WeatherNext"], "topics": ["AI for Science", "天气预测", "开源模型"], "facts": ["DeepMind于2026-08-06宣布开源WeatherNext 2与WeatherNext Cyclones。"], "opinions": ["超过24小时领先优势来自发布方在历史气旋上的评估。"], "content_type": "fact", "credibility": "high", "access_status": "ok", "risk_flags": ["vendor_evaluation"],
+      "evidence": [{"id": "weathernext-20260806", "kind": "official_research_announcement", "text": "On average, WeatherNext Cyclones gains more than a full day (24 hours) of lead time advantage.", "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/", "published_at": "2026-08-06", "verified": true}]
+    },
+    {
+      "title": "AWS partners with Anthropic and OpenAI to bring AWS Continuum into developer workflows",
+      "summary": "AWS 宣布将 Continuum 漏洞发现、优先级判断、沙箱验证与修复能力接入 Claude Code、Codex 和 Kiro 工作流。",
+      "published_at": "2026-08-05", "source": "AWS", "url": "https://aws.amazon.com/blogs/security/aws-partners-with-anthropic-and-openai-to-bring-aws-continuum-into-developer-workflows/",
+      "entities": ["AWS", "Anthropic", "OpenAI", "Claude Code", "Codex", "Kiro"], "topics": ["智能体基础设施", "开发者工具", "安全治理"], "facts": ["AWS宣布Continuum将扩展到Claude Code、Codex与Kiro开发工作流。"], "opinions": [], "content_type": "fact", "credibility": "high", "access_status": "ok",
+      "evidence": [{"id": "aws-continuum-20260805", "kind": "official_announcement", "text": "Today, we’re announcing a partnership with Anthropic and OpenAI that extends AWS Continuum directly into the developer workflows.", "url": "https://aws.amazon.com/blogs/security/aws-partners-with-anthropic-and-openai-to-bring-aws-continuum-into-developer-workflows/", "published_at": "2026-08-05", "verified": true}]
+    },
+    {
+      "title": "Guidance and Templates for Public-Facing AI Documentation: An AI Standards Zero Draft",
+      "summary": "NIST 发布面向公众的 AI 模型与数据集文档初始草案，给出文档流程、字段和模板，并征求公众意见。",
+      "published_at": "2026-07-29", "source": "NIST", "url": "https://doi.org/10.6028/NIST.AI.300-1.ipd",
+      "entities": ["NIST"], "topics": ["AI标准", "模型文档", "数据集文档"], "facts": ["NIST官方AI Standards页面记录该初始公共草案于2026-07-29发布。"], "opinions": [], "content_type": "fact", "credibility": "high", "access_status": "ok",
+      "evidence": [{"id": "nist-zero-draft-20260729", "kind": "government_standard_draft", "text": "On July 29, 2026, NIST released an initial public draft of Guidance and Templates for Public-Facing AI Documentation.", "url": "https://www.nist.gov/artificial-intelligence/ai-standards", "published_at": "2026-07-29", "verified": true}]
+    },
+    {
+      "title": "Utility Under Attack: Agent Memory Poisoning and the Limits of Content Screening and Provenance Ranking",
+      "summary": "论文称仅污染 LongMemEval 语料的 1.2% 即使准确率由 0.850 降至 0.300，且四阶段写入筛查未拒绝 360 条投毒记忆中的任何一条。",
+      "published_at": "2026-08-21", "source": "arXiv", "url": "https://arxiv.org/abs/2608.21230",
+      "entities": ["LongMemEval", "Aegis"], "topics": ["智能体记忆", "安全研究", "记忆投毒"], "facts": [], "opinions": ["预印本作者报告1.2%投毒使准确率从0.850降至0.300，尚未经同行评审或独立复现。"], "content_type": "opinion", "credibility": "medium", "access_status": "ok", "risk_flags": ["preprint", "not_independently_reproduced"],
+      "evidence": [{"id": "arxiv-memory-poisoning-2608.21230", "kind": "preprint_abstract_and_html", "text": "With 360 fabricated memories added to the corpus - 1.2% of it - accuracy falls from 0.850 to 0.300.", "url": "https://arxiv.org/abs/2608.21230", "published_at": "2026-08-21", "verified": true}]
+    },
+    {
+      "title": "AUSO: Action-Level Unified Skill Optimization from Internalization to Utilization",
+      "summary": "论文提出动作级统一技能优化框架，把技能内化与调用选择合并为按动作收益优化的过程。",
+      "published_at": "2026-08-21", "source": "arXiv", "url": "https://arxiv.org/abs/2608.21292",
+      "entities": ["AUSO", "ALFWorld", "WebShop", "SearchQA"], "topics": ["智能体技能", "技能优化", "强化学习"], "facts": [], "opinions": ["作者报告AUSO在ALFWorld、WebShop和SearchQA上优于对比基线并改善分布外泛化。"], "content_type": "opinion", "credibility": "medium", "access_status": "ok", "risk_flags": ["preprint", "not_independently_reproduced"],
+      "evidence": [{"id": "arxiv-auso-2608.21292", "kind": "preprint_abstract", "text": "Experiments on ALFWorld, WebShop, and SearchQA show that AUSO consistently improves agent performance and out-of-distribution generalization over competitive baselines.", "url": "https://arxiv.org/abs/2608.21292", "published_at": "2026-08-21", "verified": true}]
+    },
+    {
+      "title": "VIALS: A Benchmark for Visual Interpretation of Artifacts in the Life Sciences",
+      "summary": "论文提出包含 161 项任务的生命科学视觉制品解读基准，覆盖凝胶、显微图像、质粒图谱、流式图等专业工作流。",
+      "published_at": "2026-08-21", "source": "arXiv", "url": "https://arxiv.org/abs/2608.21357",
+      "entities": ["VIALS"], "topics": ["多模态", "生命科学", "专业基准"], "facts": ["VIALS基准包含161项生命科学视觉制品解读任务。"], "opinions": ["作者称前沿视觉语言模型在这些专业图像上仍明显受限。"], "content_type": "opinion", "credibility": "medium", "access_status": "ok", "risk_flags": ["preprint", "not_independently_reproduced"],
+      "evidence": [{"id": "arxiv-vials-2608.21357", "kind": "preprint_abstract", "text": "We introduce VIALS, a visual question-answering benchmark with 161 such interpretation tasks.", "url": "https://arxiv.org/abs/2608.21357", "published_at": "2026-08-21", "verified": true}]
+    },
+    {
+      "title": "vLLM v0.27.0 Release Notes",
+      "summary": "vLLM v0.27.0 汇集 561 次提交和 242 名贡献者，加入 Kimi K3、Qwen3.5 等模型支持，并升级到 PyTorch 2.13.0。",
+      "published_at": "2026-08-10T21:18:11Z", "source": "vLLM GitHub", "url": "https://github.com/vllm-project/vllm/releases/tag/v0.27.0",
+      "entities": ["vLLM", "Kimi K3", "Qwen3.5", "PyTorch"], "topics": ["开源推理", "模型服务", "GitHub发布"], "facts": ["GitHub REST显示v0.27.0于2026-08-10发布；发布说明列出561次提交和242名贡献者。"], "opinions": [], "content_type": "fact", "credibility": "high", "access_status": "ok",
+      "evidence": [{"id": "vllm-v0270", "kind": "github_release", "text": "This release features 561 commits from 242 contributors (64 new).", "url": "https://github.com/vllm-project/vllm/releases/tag/v0.27.0", "published_at": "2026-08-10T21:18:11Z", "verified": true}]
+    },
+    {
+      "title": "Ollama v0.32.11",
+      "summary": "Ollama v0.32.11 加入 DeepSeek Harness、Muse Code 启动支持，并为 OpenAI 兼容 Responses API 增加网页搜索。",
+      "published_at": "2026-08-14T01:22:12Z", "source": "Ollama GitHub", "url": "https://github.com/ollama/ollama/releases/tag/v0.32.11",
+      "entities": ["Ollama", "DeepSeek Harness", "Muse Code"], "topics": ["本地模型", "智能体工具", "GitHub发布"], "facts": ["GitHub REST显示v0.32.11于2026-08-14发布并列出17个发布资产。"], "opinions": [], "content_type": "fact", "credibility": "high", "access_status": "ok",
+      "evidence": [{"id": "ollama-v03211", "kind": "github_release", "text": "The OpenAI-compatible Responses API now supports web search.", "url": "https://github.com/ollama/ollama/releases/tag/v0.32.11", "published_at": "2026-08-14T01:22:12Z", "verified": true}]
+    },
+    {
+      "title": "What Is a Harness?",
+      "summary": "HN 高关注讨论把 harness 视为模型之外的工具、护栏、记忆、验证与工作流层，并围绕“极简 harness”与“可审查流程”展开争论。",
+      "published_at": "2026-08-23T14:24:21Z", "source": "Hacker News", "url": "https://news.ycombinator.com/item?id=49409092",
+      "entities": ["AI harness"], "topics": ["智能体工程", "开发者社区", "可验证性"], "facts": ["HN Firebase在采集时显示523分、165条后代评论。"], "opinions": ["讨论者对极简工具集和流程化护栏的取舍存在明显分歧。"], "content_type": "opinion", "credibility": "medium", "access_status": "ok", "risk_flags": ["engagement_snapshot"],
+      "evidence": [{"id": "hn-49409092", "kind": "community_discussion", "text": "523 points and 165 descendants at collection time.", "url": "https://news.ycombinator.com/item?id=49409092", "published_at": "2026-08-23T14:24:21Z", "verified": true}]
+    },
+    {
+      "title": "Don't paste the AI, please",
+      "summary": "该站点倡议不要把未经筛选的 AI 生成内容直接粘贴给他人；HN 讨论反映开发者对 AI 垃圾内容、信任和人类审核成本的强烈反应。",
+      "published_at": "2026-08-20T08:20:44Z", "source": "Hacker News", "url": "https://news.ycombinator.com/item?id=49371857",
+      "entities": ["Don't paste the AI"], "topics": ["AI内容质量", "开发者社区", "人类审核"], "facts": ["HN Algolia在采集时显示1044分、579条评论。"], "opinions": ["高互动说明AI生成内容的质量与责任边界是本窗口显著社区议题，但不代表整体公众意见。"], "content_type": "opinion", "credibility": "medium", "access_status": "ok", "risk_flags": ["engagement_snapshot"],
+      "evidence": [{"id": "hn-49371857", "kind": "community_discussion", "text": "1044 points and 579 comments at collection time.", "url": "https://news.ycombinator.com/item?id=49371857", "published_at": "2026-08-20T08:20:44Z", "verified": true}]
+    },
+    {
+      "title": "AI;DR (AI; Didn't Read)",
+      "summary": "文章与 HN 讨论聚焦 AI 摘要正在改变阅读、写作与信息分发方式，并质疑信息压缩是否进一步削弱原始内容消费。",
+      "published_at": "2026-08-17T19:47:15Z", "source": "Hacker News", "url": "https://news.ycombinator.com/item?id=49336573",
+      "entities": ["AI;DR"], "topics": ["AI摘要", "内容生态", "开发者社区"], "facts": ["HN Algolia在采集时显示1111分、690条评论。"], "opinions": ["讨论观点集中在摘要便利性与原始内容价值流失之间的张力。"], "content_type": "opinion", "credibility": "medium", "access_status": "ok", "risk_flags": ["engagement_snapshot"],
+      "evidence": [{"id": "hn-49336573", "kind": "community_discussion", "text": "1111 points and 690 comments at collection time.", "url": "https://news.ycombinator.com/item?id=49336573", "published_at": "2026-08-17T19:47:15Z", "verified": true}]
+    }
+  ]
+}
