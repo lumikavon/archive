@@ -1,0 +1,579 @@
+{
+  "envelope": {
+    "skill": "news-blogger-skill",
+    "run_id": "run-2400f089629ea7ed",
+    "executed_at": "2026-08-25T05:34:57Z",
+    "data_time_range": {
+      "from": null,
+      "to": null
+    },
+    "workflow_phase": "adhoc",
+    "tools_used": [
+      {
+        "name": "news-ops-skill",
+        "backend": "tool_doctor+collect",
+        "status": "ok",
+        "stage": "upstream"
+      },
+      {
+        "name": "last30days",
+        "backend": "v3-native-search",
+        "status": "degraded",
+        "stage": "upstream"
+      },
+      {
+        "name": "agent-reach",
+        "backend": "doctor+public-routes",
+        "status": "ok",
+        "stage": "upstream"
+      },
+      {
+        "name": "web-search",
+        "backend": "public-web",
+        "status": "ok",
+        "stage": "upstream"
+      },
+      {
+        "name": "input-evidence",
+        "backend": "input",
+        "status": "ok",
+        "stage": "content"
+      }
+    ],
+    "sources": {
+      "succeeded": [],
+      "failed": []
+    },
+    "confidence_notes": [
+      "drafts use supplied verified evidence"
+    ],
+    "risk_flags": [],
+    "follow_up_actions": [
+      "Human-review drafts before any external publication."
+    ],
+    "upstream_inputs": [
+      {
+        "skill": "news-ops-skill",
+        "run_id": "run-2400f089629ea7ed",
+        "artifact_path": "D:\\@human\\archive\\news\\社区\\run-20260824T215739-最近一天-community\\news-pack.json"
+      },
+      {
+        "skill": "inline-input",
+        "run_id": "unknown",
+        "artifact_path": "inline"
+      }
+    ]
+  },
+  "items": [
+    {
+      "topic_id": "topic-66b6da6ea0",
+      "topic_title": "机器人 AI 公司 Generalist 披露约 2 亿美元新融资",
+      "core_thesis": "Axios 将该交易描述为新一轮机器人 AI 融资。",
+      "target_audience": "希望理解 AI 趋势而不被传闻带偏的普通读者",
+      "pain_point_or_gap": "单条信息常被误读成行业共识，需要把已证实内容与推测拆开。",
+      "evidence_basis": [
+        "ev-business-generalist-axios"
+      ],
+      "evidence_basis_records": [
+        {
+          "id": "ev-business-generalist-axios",
+          "kind": "source_excerpt",
+          "text": "Axios published on August 24, 2026 that Generalist raises another $200 million for AI robotics; the Chinese headline expresses this as about 2 hundred-million dollars. A linked Form D evidence trail reports $198,224,662 sold and 32 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "url": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+          "published_at": "2026-08-24T20:54:21Z",
+          "verified": true
+        }
+      ],
+      "evidence_pool": [
+        {
+          "id": "ev-business-generalist-axios",
+          "kind": "source_excerpt",
+          "text": "Axios published on August 24, 2026 that Generalist raises another $200 million for AI robotics; the Chinese headline expresses this as about 2 hundred-million dollars. A linked Form D evidence trail reports $198,224,662 sold and 32 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "url": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+          "published_at": "2026-08-24T20:54:21Z",
+          "verified": true
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "claim-4d8a029c24",
+          "type": "fact",
+          "text": "Axios published on August 24, 2026 that Generalist raises another $200 million for AI robotics; the Chinese headline expresses this as about 2 hundred-million dollars. A linked Form D evidence trail reports $198,224,662 sold and 32 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "evidence_ids": [
+            "ev-business-generalist-axios"
+          ],
+          "verification_status": "verified"
+        },
+        {
+          "claim_id": "claim-e6d08f6508",
+          "type": "analysis",
+          "text": "Axios 将该交易描述为新一轮机器人 AI 融资。",
+          "evidence_ids": [
+            "ev-business-generalist-axios"
+          ],
+          "verification_status": "supported"
+        }
+      ],
+      "controversy_points": [
+        "公开讨论的热度是否代表真实普及？",
+        "还有哪些关键事实尚未验证？"
+      ],
+      "structure_outline": [
+        "已证实事实",
+        "不同解释",
+        "尚未验证的关键问题",
+        "读者可以继续观察什么"
+      ],
+      "citable_data_and_links": [
+        {
+          "label": "原始证据",
+          "url": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+          "evidence_id": "ev-business-generalist-axios"
+        }
+      ],
+      "misleading_claims_to_avoid": [
+        "不要把单一案例说成行业普遍趋势。",
+        "不要把新闻直接等同于买卖结论。",
+        "不要补写未经证实的数字或引语。"
+      ],
+      "suitable_platforms": [
+        "wechat",
+        "xiaohongshu",
+        "bilibili",
+        "x_twitter",
+        "zhihu_or_long_form",
+        "telegram"
+      ],
+      "virality_and_timeliness": {
+        "potential": "中",
+        "timeliness": "需以来源发布时间和后续更新为准",
+        "reason": "有争议点，但证据边界限制了确定性表达。"
+      },
+      "investment_risk_disclaimer": null,
+      "investment_related": false,
+      "platform_contract_version": "1",
+      "platform_drafts": {
+        "bilibili_script": "【开场】今天聊：机器人 AI 公司 Generalist 披露约 2 亿美元新融资\n【分析】Axios 将该交易描述为新一轮机器人 AI 融资。\n【边界】证据来自公开来源，产业链/行情仍需核验。\n【来源】https://www.axios.com/2026/08/24/robotics-ai-generalist-200m\n【结尾】把已证实事实和个人判断分开。",
+        "telegram": "[研究线索] 机器人 AI 公司 Generalist 披露约 2 亿美元新融资\nAxios 将该交易描述为新一轮机器人 AI 融资。\n来源：https://www.axios.com/2026/08/24/robotics-ai-generalist-200m\n",
+        "wechat": "机器人 AI 公司 Generalist 披露约 2 亿美元新融资\n\n核心观点：Axios 将该交易描述为新一轮机器人 AI 融资。\n\n证据与边界\n来源：https://www.axios.com/2026/08/24/robotics-ai-generalist-200m\n这条线索仍需结合公开披露和后续数据核验。\n\n",
+        "x_twitter": "机器人 AI 公司 Generalist 披露约 2 亿美元新融资\nAxios 将该交易描述为新一轮机器人 AI 融资。\n证据：https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+        "xiaohongshu": "机器人 AI 公司 Generalist 披露约 2 亿美元新融资\n\n• Axios 将该交易描述为新一轮机器人 AI 融资。\n• 先看证据，再看想象空间\n• 目前不能据此下结论\nhttps://www.axios.com/2026/08/24/robotics-ai-generalist-200m\n",
+        "zhihu_or_long_form": "问题：机器人 AI 公司 Generalist 披露约 2 亿美元新融资\n\n结论先行：Axios 将该交易描述为新一轮机器人 AI 融资。\n\n一、已知事实\n证据来自公开来源：https://www.axios.com/2026/08/24/robotics-ai-generalist-200m\n二、可能解释\n这是作者分析，不等于事实。\n三、尚未解决\n需要更多披露、数据和反例。\n\n"
+      }
+    },
+    {
+      "topic_id": "topic-2fc228fde2",
+      "topic_title": "Blank Street Coffee 披露约 1.05 亿美元证券发行",
+      "core_thesis": "Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。",
+      "target_audience": "希望理解 AI 趋势而不被传闻带偏的普通读者",
+      "pain_point_or_gap": "单条信息常被误读成行业共识，需要把已证实内容与推测拆开。",
+      "evidence_basis": [
+        "ev-business-blankstreet-axios"
+      ],
+      "evidence_basis_records": [
+        {
+          "id": "ev-business-blankstreet-axios",
+          "kind": "source_excerpt",
+          "text": "Axios published on August 24, 2026 that Blank Street Coffee had a $105 million transaction; the Chinese headline expresses this as about 1.05 hundred-million dollars. A Form D evidence trail reports an offering and amount sold of $104,999,981 with 6 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "url": "https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+          "published_at": "2026-08-24T17:58:08Z",
+          "verified": true
+        }
+      ],
+      "evidence_pool": [
+        {
+          "id": "ev-business-blankstreet-axios",
+          "kind": "source_excerpt",
+          "text": "Axios published on August 24, 2026 that Blank Street Coffee had a $105 million transaction; the Chinese headline expresses this as about 1.05 hundred-million dollars. A Form D evidence trail reports an offering and amount sold of $104,999,981 with 6 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "url": "https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+          "published_at": "2026-08-24T17:58:08Z",
+          "verified": true
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "claim-4904704dee",
+          "type": "fact",
+          "text": "Axios published on August 24, 2026 that Blank Street Coffee had a $105 million transaction; the Chinese headline expresses this as about 1.05 hundred-million dollars. A Form D evidence trail reports an offering and amount sold of $104,999,981 with 6 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "evidence_ids": [
+            "ev-business-blankstreet-axios"
+          ],
+          "verification_status": "verified"
+        },
+        {
+          "claim_id": "claim-07ca0044b8",
+          "type": "analysis",
+          "text": "Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。",
+          "evidence_ids": [
+            "ev-business-blankstreet-axios"
+          ],
+          "verification_status": "supported"
+        }
+      ],
+      "controversy_points": [
+        "公开讨论的热度是否代表真实普及？",
+        "还有哪些关键事实尚未验证？"
+      ],
+      "structure_outline": [
+        "已证实事实",
+        "不同解释",
+        "尚未验证的关键问题",
+        "读者可以继续观察什么"
+      ],
+      "citable_data_and_links": [
+        {
+          "label": "原始证据",
+          "url": "https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+          "evidence_id": "ev-business-blankstreet-axios"
+        }
+      ],
+      "misleading_claims_to_avoid": [
+        "不要把单一案例说成行业普遍趋势。",
+        "不要把新闻直接等同于买卖结论。",
+        "不要补写未经证实的数字或引语。"
+      ],
+      "suitable_platforms": [
+        "wechat",
+        "xiaohongshu",
+        "bilibili",
+        "x_twitter",
+        "zhihu_or_long_form",
+        "telegram"
+      ],
+      "virality_and_timeliness": {
+        "potential": "中",
+        "timeliness": "需以来源发布时间和后续更新为准",
+        "reason": "有争议点，但证据边界限制了确定性表达。"
+      },
+      "investment_risk_disclaimer": null,
+      "investment_related": false,
+      "platform_contract_version": "1",
+      "platform_drafts": {
+        "bilibili_script": "【开场】今天聊：Blank Street Coffee 披露约 1.05 亿美元证券发行\n【分析】Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。\n【边界】证据来自公开来源，产业链/行情仍需核验。\n【来源】https://www.axios.com/2026/08/24/blank-street-coffee-105-million\n【结尾】把已证实事实和个人判断分开。",
+        "telegram": "[研究线索] Blank Street Coffee 披露约 1.05 亿美元证券发行\nAxios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。\n来源：https://www.axios.com/2026/08/24/blank-street-coffee-105-million\n",
+        "wechat": "Blank Street Coffee 披露约 1.05 亿美元证券发行\n\n核心观点：Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。\n\n证据与边界\n来源：https://www.axios.com/2026/08/24/blank-street-coffee-105-million\n这条线索仍需结合公开披露和后续数据核验。\n\n",
+        "x_twitter": "Blank Street Coffee 披露约 1.05 亿美元证券发行\nAxios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。\n证据：https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+        "xiaohongshu": "Blank Street Coffee 披露约 1.05 亿美元证券发行\n\n• Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。\n• 先看证据，再看想象空间\n• 目前不能据此下结论\nhttps://www.axios.com/2026/08/24/blank-street-coffee-105-million\n",
+        "zhihu_or_long_form": "问题：Blank Street Coffee 披露约 1.05 亿美元证券发行\n\n结论先行：Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。\n\n一、已知事实\n证据来自公开来源：https://www.axios.com/2026/08/24/blank-street-coffee-105-million\n二、可能解释\n这是作者分析，不等于事实。\n三、尚未解决\n需要更多披露、数据和反例。\n\n"
+      }
+    },
+    {
+      "topic_id": "topic-069458b5c4",
+      "topic_title": "保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突",
+      "core_thesis": "树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。",
+      "target_audience": "希望理解 AI 趋势而不被传闻带偏的普通读者",
+      "pain_point_or_gap": "单条信息常被误读成行业共识，需要把已证实内容与推测拆开。",
+      "evidence_basis": [
+        "ev-society-whqr"
+      ],
+      "evidence_basis_records": [
+        {
+          "id": "ev-society-whqr",
+          "kind": "source_excerpt",
+          "text": "WHQR published August 24, 2026 at 8:06 AM EDT. Hillcrest Phase I is reported at $25.7 million for 84 affordable homes for people 55 and older, while six live oaks are slated for removal. The full plan is 550 homes on 26 acres.",
+          "url": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+          "published_at": "2026-08-24T12:06:00Z",
+          "verified": true
+        }
+      ],
+      "evidence_pool": [
+        {
+          "id": "ev-society-whqr",
+          "kind": "source_excerpt",
+          "text": "WHQR published August 24, 2026 at 8:06 AM EDT. Hillcrest Phase I is reported at $25.7 million for 84 affordable homes for people 55 and older, while six live oaks are slated for removal. The full plan is 550 homes on 26 acres.",
+          "url": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+          "published_at": "2026-08-24T12:06:00Z",
+          "verified": true
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "claim-8b525f84ad",
+          "type": "fact",
+          "text": "WHQR published August 24, 2026 at 8:06 AM EDT. Hillcrest Phase I is reported at $25.7 million for 84 affordable homes for people 55 and older, while six live oaks are slated for removal. The full plan is 550 homes on 26 acres.",
+          "evidence_ids": [
+            "ev-society-whqr"
+          ],
+          "verification_status": "verified"
+        },
+        {
+          "claim_id": "claim-eecfe78480",
+          "type": "analysis",
+          "text": "树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。",
+          "evidence_ids": [
+            "ev-society-whqr"
+          ],
+          "verification_status": "supported"
+        }
+      ],
+      "controversy_points": [
+        "公开讨论的热度是否代表真实普及？",
+        "还有哪些关键事实尚未验证？"
+      ],
+      "structure_outline": [
+        "已证实事实",
+        "不同解释",
+        "尚未验证的关键问题",
+        "读者可以继续观察什么"
+      ],
+      "citable_data_and_links": [
+        {
+          "label": "原始证据",
+          "url": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+          "evidence_id": "ev-society-whqr"
+        }
+      ],
+      "misleading_claims_to_avoid": [
+        "不要把单一案例说成行业普遍趋势。",
+        "不要把新闻直接等同于买卖结论。",
+        "不要补写未经证实的数字或引语。"
+      ],
+      "suitable_platforms": [
+        "wechat",
+        "xiaohongshu",
+        "bilibili",
+        "x_twitter",
+        "zhihu_or_long_form",
+        "telegram"
+      ],
+      "virality_and_timeliness": {
+        "potential": "中",
+        "timeliness": "需以来源发布时间和后续更新为准",
+        "reason": "有争议点，但证据边界限制了确定性表达。"
+      },
+      "investment_risk_disclaimer": null,
+      "investment_related": false,
+      "platform_contract_version": "1",
+      "platform_drafts": {
+        "bilibili_script": "【开场】今天聊：保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突\n【分析】树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。\n【边界】证据来自公开来源，产业链/行情仍需核验。\n【来源】https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks\n【结尾】把已证实事实和个人判断分开。",
+        "telegram": "[研究线索] 保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突\n树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。\n来源：https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks\n",
+        "wechat": "保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突\n\n核心观点：树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。\n\n证据与边界\n来源：https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks\n这条线索仍需结合公开披露和后续数据核验。\n\n",
+        "x_twitter": "保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突\n树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。\n证据：https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+        "xiaohongshu": "保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突\n\n• 树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。\n• 先看证据，再看想象空间\n• 目前不能据此下结论\nhttps://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks\n",
+        "zhihu_or_long_form": "问题：保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突\n\n结论先行：树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。\n\n一、已知事实\n证据来自公开来源：https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks\n二、可能解释\n这是作者分析，不等于事实。\n三、尚未解决\n需要更多披露、数据和反例。\n\n"
+      }
+    },
+    {
+      "topic_id": "topic-41620b15f2",
+      "topic_title": "“Aura farming”从网络梗演变为拉美线下青年竞赛",
+      "core_thesis": "受访学者认为活动可能回应青年对线下公共空间和连接的需求。",
+      "target_audience": "希望理解 AI 趋势而不被传闻带偏的普通读者",
+      "pain_point_or_gap": "单条信息常被误读成行业共识，需要把已证实内容与推测拆开。",
+      "evidence_basis": [
+        "ev-culture-aura-battles"
+      ],
+      "evidence_basis_records": [
+        {
+          "id": "ev-culture-aura-battles",
+          "kind": "source_excerpt",
+          "text": "CNN Newsource via KESQ published August 24, 2026 at 3:00 AM. It describes the phrase Aura farming and reports aura battles across Latin America; Brazilian organizer Uvitinho said more than 200 people participated, and the report says competition videos received hundreds of thousands of views.",
+          "url": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/",
+          "published_at": "2026-08-24T10:00:29Z",
+          "verified": true
+        }
+      ],
+      "evidence_pool": [
+        {
+          "id": "ev-culture-aura-battles",
+          "kind": "source_excerpt",
+          "text": "CNN Newsource via KESQ published August 24, 2026 at 3:00 AM. It describes the phrase Aura farming and reports aura battles across Latin America; Brazilian organizer Uvitinho said more than 200 people participated, and the report says competition videos received hundreds of thousands of views.",
+          "url": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/",
+          "published_at": "2026-08-24T10:00:29Z",
+          "verified": true
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "claim-93f1dfc53f",
+          "type": "fact",
+          "text": "CNN Newsource via KESQ published August 24, 2026 at 3:00 AM. It describes the phrase Aura farming and reports aura battles across Latin America; Brazilian organizer Uvitinho said more than 200 people participated, and the report says competition videos received hundreds of thousands of views.",
+          "evidence_ids": [
+            "ev-culture-aura-battles"
+          ],
+          "verification_status": "verified"
+        },
+        {
+          "claim_id": "claim-0c948853fe",
+          "type": "analysis",
+          "text": "受访学者认为活动可能回应青年对线下公共空间和连接的需求。",
+          "evidence_ids": [
+            "ev-culture-aura-battles"
+          ],
+          "verification_status": "supported"
+        }
+      ],
+      "controversy_points": [
+        "公开讨论的热度是否代表真实普及？",
+        "还有哪些关键事实尚未验证？"
+      ],
+      "structure_outline": [
+        "已证实事实",
+        "不同解释",
+        "尚未验证的关键问题",
+        "读者可以继续观察什么"
+      ],
+      "citable_data_and_links": [
+        {
+          "label": "原始证据",
+          "url": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/",
+          "evidence_id": "ev-culture-aura-battles"
+        }
+      ],
+      "misleading_claims_to_avoid": [
+        "不要把单一案例说成行业普遍趋势。",
+        "不要把新闻直接等同于买卖结论。",
+        "不要补写未经证实的数字或引语。"
+      ],
+      "suitable_platforms": [
+        "wechat",
+        "xiaohongshu",
+        "bilibili",
+        "x_twitter",
+        "zhihu_or_long_form",
+        "telegram"
+      ],
+      "virality_and_timeliness": {
+        "potential": "中",
+        "timeliness": "需以来源发布时间和后续更新为准",
+        "reason": "有争议点，但证据边界限制了确定性表达。"
+      },
+      "investment_risk_disclaimer": null,
+      "investment_related": false,
+      "platform_contract_version": "1",
+      "platform_drafts": {
+        "bilibili_script": "【开场】今天聊：“Aura farming”从网络梗演变为拉美线下青年竞赛\n【分析】受访学者认为活动可能回应青年对线下公共空间和连接的需求。\n【边界】证据来自公开来源，产业链/行情仍需核验。\n【来源】https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/\n【结尾】把已证实事实和个人判断分开。",
+        "telegram": "[研究线索] “Aura farming”从网络梗演变为拉美线下青年竞赛\n受访学者认为活动可能回应青年对线下公共空间和连接的需求。\n来源：https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/\n",
+        "wechat": "“Aura farming”从网络梗演变为拉美线下青年竞赛\n\n核心观点：受访学者认为活动可能回应青年对线下公共空间和连接的需求。\n\n证据与边界\n来源：https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/\n这条线索仍需结合公开披露和后续数据核验。\n\n",
+        "x_twitter": "“Aura farming”从网络梗演变为拉美线下青年竞赛\n受访学者认为活动可能回应青年对线下公共空间和连接的需求。\n证据：https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/",
+        "xiaohongshu": "“Aura farming”从网络梗演变为拉美线下青年竞赛\n\n• 受访学者认为活动可能回应青年对线下公共空间和连接的需求。\n• 先看证据，再看想象空间\n• 目前不能据此下结论\nhttps://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/\n",
+        "zhihu_or_long_form": "问题：“Aura farming”从网络梗演变为拉美线下青年竞赛\n\n结论先行：受访学者认为活动可能回应青年对线下公共空间和连接的需求。\n\n一、已知事实\n证据来自公开来源：https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/\n二、可能解释\n这是作者分析，不等于事实。\n三、尚未解决\n需要更多披露、数据和反例。\n\n"
+      }
+    },
+    {
+      "topic_id": "topic-d0042d1e50",
+      "topic_title": "OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复",
+      "core_thesis": "OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。",
+      "target_audience": "正在寻找 AI 工具和单人创业机会的开发者",
+      "pain_point_or_gap": "工具发布不等于用户愿意付费，读者需要判断真实使用门槛和可验证需求。",
+      "evidence_basis": [
+        "ev-tech-openapi-7250"
+      ],
+      "evidence_basis_records": [
+        {
+          "id": "ev-tech-openapi-7250",
+          "kind": "source_excerpt",
+          "text": "OpenAPI Generator version 7.25 patch 0, written v7.25.0, was released on 24 Aug at 08:18. The release says the stable release has breaking changes with fallbacks, 240+ enhancements and bug fixes, and updates the parser to 2.1.46.",
+          "url": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+          "published_at": "2026-08-24T08:18:07Z",
+          "verified": true
+        }
+      ],
+      "evidence_pool": [
+        {
+          "id": "ev-tech-openapi-7250",
+          "kind": "source_excerpt",
+          "text": "OpenAPI Generator version 7.25 patch 0, written v7.25.0, was released on 24 Aug at 08:18. The release says the stable release has breaking changes with fallbacks, 240+ enhancements and bug fixes, and updates the parser to 2.1.46.",
+          "url": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+          "published_at": "2026-08-24T08:18:07Z",
+          "verified": true
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "claim-4747f781e9",
+          "type": "fact",
+          "text": "OpenAPI Generator version 7.25 patch 0, written v7.25.0, was released on 24 Aug at 08:18. The release says the stable release has breaking changes with fallbacks, 240+ enhancements and bug fixes, and updates the parser to 2.1.46.",
+          "evidence_ids": [
+            "ev-tech-openapi-7250"
+          ],
+          "verification_status": "verified"
+        },
+        {
+          "claim_id": "claim-7ecfda4f73",
+          "type": "analysis",
+          "text": "OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。",
+          "evidence_ids": [
+            "ev-tech-openapi-7250"
+          ],
+          "verification_status": "supported"
+        }
+      ],
+      "controversy_points": [
+        "降低实验成本是否足以形成稳定商业价值？",
+        "开源热度与长期留存、付费之间可能脱节。"
+      ],
+      "structure_outline": [
+        "工具解决的具体摩擦",
+        "适用用户与上手门槛",
+        "可能的产品化机会",
+        "证据边界和反例"
+      ],
+      "citable_data_and_links": [
+        {
+          "label": "原始证据",
+          "url": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+          "evidence_id": "ev-tech-openapi-7250"
+        }
+      ],
+      "misleading_claims_to_avoid": [
+        "不要把单一案例说成行业普遍趋势。",
+        "不要把新闻直接等同于买卖结论。",
+        "不要补写未经证实的数字或引语。"
+      ],
+      "suitable_platforms": [
+        "wechat",
+        "xiaohongshu",
+        "bilibili",
+        "x_twitter",
+        "zhihu_or_long_form",
+        "telegram"
+      ],
+      "virality_and_timeliness": {
+        "potential": "中",
+        "timeliness": "需以来源发布时间和后续更新为准",
+        "reason": "有争议点，但证据边界限制了确定性表达。"
+      },
+      "investment_risk_disclaimer": null,
+      "investment_related": false,
+      "platform_contract_version": "1",
+      "platform_drafts": {
+        "bilibili_script": "【开场】今天聊：OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复\n【分析】OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。\n【边界】证据来自公开来源，产业链/行情仍需核验。\n【来源】https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0\n【结尾】把已证实事实和个人判断分开。",
+        "telegram": "[研究线索] OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复\nOpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。\n来源：https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0\n",
+        "wechat": "OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复\n\n核心观点：OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。\n\n证据与边界\n来源：https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0\n这条线索仍需结合公开披露和后续数据核验。\n\n",
+        "x_twitter": "OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复\nOpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。\n证据：https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+        "xiaohongshu": "OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复\n\n• OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。\n• 先看证据，再看想象空间\n• 目前不能据此下结论\nhttps://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0\n",
+        "zhihu_or_long_form": "问题：OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复\n\n结论先行：OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。\n\n一、已知事实\n证据来自公开来源：https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0\n二、可能解释\n这是作者分析，不等于事实。\n三、尚未解决\n需要更多披露、数据和反例。\n\n"
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "failures": [],
+    "checks": [
+      {
+        "name": "evidence",
+        "ok": true,
+        "failure_count": 0,
+        "failures": []
+      },
+      {
+        "name": "claims",
+        "ok": true,
+        "failure_count": 0,
+        "failures": []
+      },
+      {
+        "name": "drafts",
+        "ok": true,
+        "failure_count": 0,
+        "failures": []
+      }
+    ],
+    "warnings": [],
+    "summary": {
+      "items": 5,
+      "checks": 3,
+      "failures": 0
+    }
+  }
+}

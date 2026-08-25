@@ -1,0 +1,144 @@
+{
+  "available_sources": [
+    "reddit",
+    "tiktok",
+    "instagram",
+    "x",
+    "youtube",
+    "hackernews",
+    "polymarket",
+    "github",
+    "grounding"
+  ],
+  "bird_authenticated": false,
+  "bird_installed": true,
+  "bird_username": null,
+  "browser_cookies": {
+    "browsers": [],
+    "mode": "plan_only",
+    "reads_values": false
+  },
+  "config_source": "global:C:\\Users\\virtualink\\.config\\last30days\\.env",
+  "credential_destinations": {
+    "global_env": "C:\\Users\\virtualink\\.config\\last30days\\.env"
+  },
+  "external_commands": {
+    "arxiv-pp-cli": false,
+    "digg-pp-cli": false,
+    "gh": true,
+    "techmeme-pp-cli": false,
+    "trustpilot-pp-cli": false,
+    "yt-dlp": true
+  },
+  "has_github": true,
+  "has_scrapecreators": true,
+  "ignored_endpoint_overrides": [],
+  "ignored_project_config": null,
+  "ignored_project_config_keys": [],
+  "local_mode": false,
+  "local_writes": [],
+  "native_search": false,
+  "native_web_backend": "brave",
+  "permission_preflight": {
+    "action_items": [],
+    "conditional_writes": [],
+    "credentials": {
+      "github": {
+        "label": "GitHub token or gh auth",
+        "present": true
+      },
+      "google": {
+        "label": "Google/Gemini API key",
+        "present": false
+      },
+      "openai": {
+        "label": "OpenAI API key",
+        "present": true
+      },
+      "openrouter": {
+        "label": "OpenRouter API key",
+        "present": false
+      },
+      "perplexity": {
+        "label": "Perplexity API key",
+        "present": false
+      },
+      "scrapecreators": {
+        "label": "ScrapeCreators API key",
+        "present": true
+      },
+      "xai": {
+        "label": "xAI API key",
+        "present": true
+      }
+    },
+    "external_commands": {
+      "arxiv-pp-cli": {
+        "status": "unavailable"
+      },
+      "digg-pp-cli": {
+        "status": "unavailable"
+      },
+      "gh": {
+        "status": "available"
+      },
+      "techmeme-pp-cli": {
+        "status": "unavailable"
+      },
+      "trustpilot-pp-cli": {
+        "status": "unavailable"
+      },
+      "yt-dlp": {
+        "status": "available"
+      }
+    },
+    "local_reads": {
+      "browser_cookies": {
+        "browsers": [],
+        "mode": "plan_only",
+        "reads_values": false,
+        "status": "off"
+      },
+      "config_source": "global:C:\\Users\\virtualink\\.config\\last30days\\.env",
+      "project_config": {
+        "ignored_keys": [],
+        "ignored_path": null,
+        "status": "not_active",
+        "trusted": false
+      }
+    },
+    "local_writes": [],
+    "network": {
+      "available_sources": [
+        "reddit",
+        "tiktok",
+        "instagram",
+        "x",
+        "youtube",
+        "hackernews",
+        "polymarket",
+        "github",
+        "grounding"
+      ],
+      "endpoint_overrides": [],
+      "ignored_endpoint_overrides": [],
+      "native_search": false
+    },
+    "safe": true,
+    "status": "ready"
+  },
+  "providers": {
+    "google": false,
+    "openai": true,
+    "openrouter": false,
+    "perplexity": false,
+    "xai": true
+  },
+  "reasoning_provider": "auto",
+  "safe": true,
+  "x_backend": "xai",
+  "x_pending_browser_auth": false,
+  "xquik_available": false,
+  "xquik_status": "",
+  "xquik_working": null
+}

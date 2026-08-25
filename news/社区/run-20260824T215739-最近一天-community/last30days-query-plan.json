@@ -1,0 +1,35 @@
+{
+  "intent": "breaking_news",
+  "freshness_mode": "strict_recent",
+  "cluster_mode": "story",
+  "subqueries": [
+    {
+      "label": "primary",
+      "search_query": "technology business culture society community",
+      "ranking_query": "What notable community developments across technology, business, culture, and society occurred in the requested day?",
+      "sources": ["reddit", "x", "youtube", "tiktok", "instagram", "hackernews", "polymarket"],
+      "weight": 1.0
+    },
+    {
+      "label": "technology",
+      "search_query": "open source AI developer tools",
+      "ranking_query": "Which open-source, AI, and developer-tool releases had measurable community impact?",
+      "sources": ["github", "hackernews", "reddit", "x", "youtube"],
+      "weight": 0.9
+    },
+    {
+      "label": "business",
+      "search_query": "creator economy startups small business",
+      "ranking_query": "Which startup, creator-economy, and small-business developments had verifiable scale or funding?",
+      "sources": ["reddit", "x", "youtube", "tiktok", "instagram"],
+      "weight": 0.8
+    },
+    {
+      "label": "culture_society",
+      "search_query": "internet culture public community issues",
+      "ranking_query": "Which internet-culture and public-community issues drew measurable attention or official response?",
+      "sources": ["reddit", "x", "youtube", "tiktok", "instagram", "hackernews"],
+      "weight": 0.8
+    }
+  ]
+}

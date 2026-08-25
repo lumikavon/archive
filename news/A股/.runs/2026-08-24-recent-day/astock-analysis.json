@@ -1,0 +1,1171 @@
+{
+  "envelope": {
+    "skill": "new-astock-skill",
+    "run_id": "run-70c6d6e39722b03c",
+    "executed_at": "2026-08-25T04:49:42Z",
+    "data_time_range": {
+      "from": "2026-08-24T09:20:00+08:00",
+      "to": "2026-08-24T22:43:00+08:00"
+    },
+    "workflow_phase": "adhoc",
+    "tools_used": [
+      {
+        "name": "last30days",
+        "backend": "last30days.py",
+        "status": "degraded",
+        "stage": "upstream"
+      },
+      {
+        "name": "web.run",
+        "backend": "web.run",
+        "status": "ok",
+        "stage": "upstream"
+      },
+      {
+        "name": "agent-reach",
+        "backend": "agent-reach",
+        "status": "ok",
+        "stage": "upstream"
+      },
+      {
+        "name": "input-evidence",
+        "backend": "input",
+        "status": "ok",
+        "stage": "analysis"
+      }
+    ],
+    "sources": {
+      "succeeded": [],
+      "failed": []
+    },
+    "confidence_notes": [
+      "analysis uses supplied evidence"
+    ],
+    "risk_flags": [
+      "some_events_unverifiable"
+    ],
+    "follow_up_actions": [
+      "Verify company disclosures and dated market data before any decision."
+    ],
+    "upstream_inputs": [
+      {
+        "skill": "news-ops-skill",
+        "run_id": "run-70c6d6e39722b03c",
+        "artifact_path": "D:\\@human\\archive\\news\\A股\\.runs\\2026-08-24-recent-day\\news-pack.json"
+      }
+    ]
+  },
+  "items": [
+    {
+      "event_id": "astock-close-cnfin-20260824",
+      "fact": {
+        "what": [
+          "8月24日上证指数收于3882.01点，下跌0.59%。",
+          "深证成指收于13794.29点，下跌2.13%；创业板指收于3431.89点，下跌3.21%。",
+          "沪深京三市成交额约20214亿元，较前一交易日增加约1291亿元。"
+        ],
+        "when": "2026-08-24T15:30:00+08:00",
+        "source": {
+          "name": "中国金融信息网/新华财经",
+          "url": "https://www.cnfin.com/gs-lb/detail/20260824/4459430_1.html",
+          "evidence_ids": [
+            "ev-astock-close-cnfin-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "close_data_is_session_snapshot",
+        "market_missing_market_data",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "astock-breadth-sina-20260824",
+      "fact": {
+        "what": [
+          "该报道记录1456只个股上涨、3959只下跌、124只平盘。",
+          "报道描述煤炭、银行、白酒、保险相对强，医药、CRO、创新药及部分计算硬件走弱。"
+        ],
+        "when": "2026-08-24T15:47:00+08:00",
+        "source": {
+          "name": "21世纪经济报道/新浪财经",
+          "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkzxr0068368.shtml",
+          "evidence_ids": [
+            "ev-astock-breadth-sina-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "conflicts_with_10jqka_breadth_counts",
+        "market_missing_market_data",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "astock-breadth-10jqka-20260824",
+      "fact": {
+        "what": [
+          "同花顺页面记录1432只个股上涨、3913只下跌、116只平盘。",
+          "页面记录贵金属、煤炭、保险涨幅居前，生物科技、元件、医疗服务相对弱。"
+        ],
+        "when": "2026-08-24T15:30:00+08:00",
+        "source": {
+          "name": "同花顺",
+          "url": "https://news.10jqka.com.cn/20260824/c679220727.shtml",
+          "evidence_ids": [
+            "ev-astock-breadth-10jqka-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "ai_generated_disclaimer",
+        "market_missing_market_data",
+        "third_party_breadth_definition",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "optical-turnover-sina-20260824",
+      "fact": {
+        "what": [
+          "报道列示中际旭创、新易盛、兆易创新、寒武纪、长鑫科技为当日成交额靠前个股。",
+          "报道记录沪深成交额约2.01万亿元，较前一日增加约1281.92亿元。"
+        ],
+        "when": "2026-08-24T16:24:00+08:00",
+        "source": {
+          "name": "21世纪经济报道/新浪财经",
+          "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipmhfu2815320.shtml",
+          "evidence_ids": [
+            "ev-optical-turnover-sina-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [
+          "中际旭创",
+          "新易盛"
+        ],
+        "sectors": [
+          "光模块/光纤光缆",
+          "光模块/光纤光缆"
+        ],
+        "chain_segments": [
+          "光模块/光纤光缆",
+          "光模块/光纤光缆"
+        ],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "事件 → 潜在需求/技术变化 → 产业链环节 → 公司披露业务；具体传导仍需核验。",
+        "segment_chain": [
+          "光模块/光纤光缆",
+          "光模块/光纤光缆"
+        ],
+        "linkage_basis": [
+          {
+            "company": "中际旭创",
+            "basis": "公开年报/公告披露光通信模块相关业务；需按事件核对产品与客户口径。",
+            "source": "https://www.cninfo.com.cn/"
+          },
+          {
+            "company": "新易盛",
+            "basis": "公开资料披露光模块相关业务；需核对具体代际、订单与事件的传导关系。",
+            "source": "https://www.cninfo.com.cn/"
+          }
+        ]
+      },
+      "related_companies": [
+        {
+          "name": "中际旭创",
+          "ticker": "300308.SZ",
+          "basis": "公开年报/公告披露光通信模块相关业务；需按事件核对产品与客户口径。",
+          "confidence": "弱相关",
+          "basis_source": "https://www.cninfo.com.cn/",
+          "segment": "光模块/光纤光缆",
+          "basis_verified_in_event_evidence": false
+        },
+        {
+          "name": "新易盛",
+          "ticker": "300502.SZ",
+          "basis": "公开资料披露光模块相关业务；需核对具体代际、订单与事件的传导关系。",
+          "confidence": "弱相关",
+          "basis_source": "https://www.cninfo.com.cn/",
+          "segment": "光模块/光纤光缆",
+          "basis_verified_in_event_evidence": false
+        }
+      ],
+      "catalyst_stage": "发酵中",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "market_missing_market_data",
+        "turnover_is_not_fundamental_confirmation",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "公司披露依据尚未出现在本事件证据中: 中际旭创",
+        "公司披露依据尚未出现在本事件证据中: 新易盛",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "pboc-repo-cnfin-20260824",
+      "fact": {
+        "what": [
+          "人民银行开展3400亿元7天期逆回购，操作利率1.40%。",
+          "当日无逆回购到期，按该报道口径实现净投放3400亿元。",
+          "报道同时列示隔夜Shibor和DR007等资金价格。"
+        ],
+        "when": "2026-08-24T09:20:00+08:00",
+        "source": {
+          "name": "中国金融信息网/新华财经",
+          "url": "https://www.cnfin.com/hb-lb/detail/20260824/4459671_1.html",
+          "evidence_ids": [
+            "ev-pboc-repo-cnfin-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "liquidity_effect_is_inference",
+        "market_missing_market_data",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "us-close-ap-20260824",
+      "fact": {
+        "what": [
+          "AP记录标普500收于7652.86点，下跌0.3%。",
+          "道琼斯工业平均指数收于53417.16点，上涨0.3%；纳斯达克综合指数收于25980.19点，下跌0.8%。"
+        ],
+        "when": "2026-08-24T20:18:34Z",
+        "source": {
+          "name": "AP News",
+          "url": "https://apnews.com/article/8313c751e57d70d1556f679eb0f2a8cb",
+          "evidence_ids": [
+            "ev-us-close-ap-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "market_missing_market_data",
+        "overseas_signal_not_direct_causality",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "astock-northbound-eastmoney-20260824",
+      "fact": {
+        "what": [
+          "页面记录8月24日北向相关成交额约2910.35亿元，占两市成交额14.50%。",
+          "页面列出沪股通寒武纪、紫金矿业、药明康德及深股通中际旭创、新易盛等活跃标的。"
+        ],
+        "when": "2026-08-24T16:20:00+08:00",
+        "source": {
+          "name": "东方财富",
+          "url": "https://wap.eastmoney.com/a/202608243851214749.html",
+          "evidence_ids": [
+            "ev-astock-northbound-eastmoney-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "market_missing_market_data",
+        "not_a_regulatory_disclosure",
+        "third_party_flow_statistics",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "astock-mainfund-sina-20260824",
+      "fact": {
+        "what": [
+          "该统计记录主力资金净流出约799.33亿元。",
+          "同一统计记录大单净流出约375.12亿元、小单净流入约561.82亿元。"
+        ],
+        "when": "2026-08-24T16:39:00+08:00",
+        "source": {
+          "name": "观点网/新浪财经",
+          "url": "https://finance.sina.com.cn/stock/estate/integration/2026-08-24/doc-inipmhfn9987593.shtml",
+          "evidence_ids": [
+            "ev-astock-mainfund-sina-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "do_not_treat_as_official_flow",
+        "market_missing_market_data",
+        "third_party_methodology",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "fed-h15-20260824",
+      "fact": {
+        "what": [
+          "H.15页面发布日期为2026年8月24日，最新一列数据日期为8月21日。",
+          "8月21日10年期美国国债恒定期限收益率为4.74%，30年期为5.27%。"
+        ],
+        "when": "2026-08-24T16:15:00Z",
+        "source": {
+          "name": "Federal Reserve H.15",
+          "url": "https://www.federalreserve.gov/releases/h15",
+          "evidence_ids": [
+            "ev-fed-h15-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "latest_rate_date_is_aug21_not_aug24",
+        "market_missing_market_data",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "lihua-kechuang-qna-20260824",
+      "fact": {
+        "what": [
+          "公司投资者问答口径称上半年新增33个投资项目。",
+          "问答称AI和具身智能方向占新增项目的39%。"
+        ],
+        "when": "2026-08-24T16:00:00+08:00",
+        "source": {
+          "name": "同花顺/公司投资者问答",
+          "url": "https://news.10jqka.com.cn/20260824/c679237157.shtml",
+          "evidence_ids": [
+            "ev-lihua-kechuang-qna-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "company_self_report",
+        "market_missing_market_data",
+        "requires_announcement_check",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "southbound-stcn-20260824",
+      "fact": {
+        "what": [
+          "证券时报记录8月24日南向资金净买入约115.67亿港元。",
+          "报道同时记录恒生指数收报25517.33点，下跌1.89%。"
+        ],
+        "when": "2026-08-24T22:43:00+08:00",
+        "source": {
+          "name": "证券时报",
+          "url": "https://stcn.com/article/detail/4106177.html",
+          "evidence_ids": [
+            "ev-southbound-stcn-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "hong_kong_data_not_a_share_flow",
+        "market_missing_market_data",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "nikkei-xinhua-20260824",
+      "fact": {
+        "what": [
+          "日经225收盘下跌0.74%，收于65528.09点。",
+          "东京证券交易所指数上涨0.15%，收于4073.29点。"
+        ],
+        "when": "2026-08-24T16:04:00+08:00",
+        "source": {
+          "name": "新华财经/中国金融信息网",
+          "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkzxw2937285.shtml",
+          "evidence_ids": [
+            "ev-nikkei-xinhua-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "market_missing_market_data",
+        "overseas_signal_not_direct_causality",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "hsi-close-hkcna-20260824",
+      "fact": {
+        "what": [
+          "恒生指数收报25517.33点，下跌492.13点，跌幅1.89%。",
+          "主板全天成交约2911.51亿港元。"
+        ],
+        "when": "2026-08-24T16:42:00+08:00",
+        "source": {
+          "name": "香港中通社",
+          "url": "https://hkcna.hk/h5/docDetail.jsp?channel=2812&id=101403276",
+          "evidence_ids": [
+            "ev-hsi-close-hkcna-20260824"
+          ]
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "潜在催化",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "hong_kong_signal_not_direct_causality",
+        "market_missing_market_data",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "弱相关",
+        "reason": "有事件事实，但公司披露依据尚未在本事件证据中得到核实，不能把映射当作已证实影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "last30days-instagram-failure-20260824",
+      "fact": {
+        "what": [
+          "事实待核验"
+        ],
+        "when": null,
+        "source": {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/",
+          "evidence_ids": []
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "未经证实传闻",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "access_rate_limited",
+        "market_missing_market_data",
+        "no_verified_evidence",
+        "source_failure",
+        "source_rate_limited",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "用公开官方来源核实原始事件后再分析。",
+        "缺少可核验 evidence；不得把标题或传闻当事实。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "无法判断",
+        "reason": "来源受限或未验证，不能据此判断市场影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "last30days-tiktok-failure-20260824",
+      "fact": {
+        "what": [
+          "事实待核验"
+        ],
+        "when": null,
+        "source": {
+          "name": "TikTok",
+          "url": "https://www.tiktok.com/",
+          "evidence_ids": []
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "未经证实传闻",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "access_rate_limited",
+        "market_missing_market_data",
+        "no_verified_evidence",
+        "source_failure",
+        "source_rate_limited",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "用公开官方来源核实原始事件后再分析。",
+        "缺少可核验 evidence；不得把标题或传闻当事实。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "无法判断",
+        "reason": "来源受限或未验证，不能据此判断市场影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "last30days-x-failure-20260824",
+      "fact": {
+        "what": [
+          "事实待核验"
+        ],
+        "when": null,
+        "source": {
+          "name": "X/Twitter",
+          "url": "https://x.com/",
+          "evidence_ids": []
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "未经证实传闻",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "access_network_error",
+        "market_missing_market_data",
+        "no_verified_evidence",
+        "source_failure",
+        "source_network_error",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "用公开官方来源核实原始事件后再分析。",
+        "缺少可核验 evidence；不得把标题或传闻当事实。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "无法判断",
+        "reason": "来源受限或未验证，不能据此判断市场影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    },
+    {
+      "event_id": "last30days-youtube-failure-20260824",
+      "fact": {
+        "what": [
+          "事实待核验"
+        ],
+        "when": null,
+        "source": {
+          "name": "YouTube",
+          "url": "https://www.youtube.com/",
+          "evidence_ids": []
+        }
+      },
+      "impact_scope": {
+        "companies": [],
+        "sectors": [],
+        "chain_segments": [],
+        "macro_vars": []
+      },
+      "chain_mapping": {
+        "path_description": "未建立可靠产业链路径。",
+        "segment_chain": [],
+        "linkage_basis": []
+      },
+      "related_companies": [],
+      "catalyst_stage": "未经证实传闻",
+      "market_data": {
+        "as_of": null,
+        "turnover": null,
+        "change_pct": null,
+        "turnover_rate": null,
+        "capital_flow": null,
+        "dragon_tiger_list": null,
+        "data_source": null,
+        "scope": null,
+        "staleness_note": "未提供带日期、口径和来源的行情数据；没有填充数值。",
+        "freshness_status": "unknown",
+        "quality_flags": [
+          "missing_market_data"
+        ]
+      },
+      "risks": [
+        "access_login_required",
+        "market_missing_market_data",
+        "no_verified_evidence",
+        "source_failure",
+        "source_login_required",
+        "消息可能已被交易或产业链传导不成立"
+      ],
+      "verification_needed": [
+        "未找到有披露依据的产业链映射；不得仅按关键词关联公司。",
+        "用公开官方来源核实原始事件后再分析。",
+        "缺少可核验 evidence；不得把标题或传闻当事实。",
+        "补充带 as_of、data_source、scope 的公开行情来源。"
+      ],
+      "relevance_grade": {
+        "grade": "无法判断",
+        "reason": "来源受限或未验证，不能据此判断市场影响。"
+      },
+      "analysis_notes": [
+        "这是研究线索，不是买卖建议。",
+        "事实、判断、传闻和风险分开记录。"
+      ]
+    }
+  ]
+}

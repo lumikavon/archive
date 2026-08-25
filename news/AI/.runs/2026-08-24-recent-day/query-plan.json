@@ -1,0 +1,35 @@
+{
+  "intent": "breaking_news",
+  "freshness_mode": "strict_recent",
+  "cluster_mode": "story",
+  "subqueries": [
+    {
+      "label": "models_research",
+      "search_query": "artificial intelligence model research release",
+      "ranking_query": "What important artificial intelligence model or research releases appeared?",
+      "sources": ["reddit", "x", "youtube", "tiktok", "instagram", "hackernews", "polymarket"],
+      "weight": 1.0
+    },
+    {
+      "label": "agents_open_source",
+      "search_query": "AI agents open source developer tools release",
+      "ranking_query": "What notable AI agent, open-source, or developer-tool releases appeared?",
+      "sources": ["reddit", "x", "youtube", "github", "hackernews"],
+      "weight": 0.85
+    },
+    {
+      "label": "industry_infrastructure",
+      "search_query": "AI enterprise funding infrastructure product launch",
+      "ranking_query": "What important AI enterprise, funding, infrastructure, or product developments appeared?",
+      "sources": ["x", "youtube", "reddit", "hackernews"],
+      "weight": 0.75
+    },
+    {
+      "label": "policy_governance",
+      "search_query": "artificial intelligence policy regulation governance",
+      "ranking_query": "What important AI policy, regulation, governance, or safety developments appeared?",
+      "sources": ["x", "reddit", "hackernews", "youtube"],
+      "weight": 0.65
+    }
+  ]
+}

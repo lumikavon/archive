@@ -1,0 +1,21 @@
+last30days preflight
+Status: Ready to research with safe defaults.
+
+Local reads:
+- Config source: global:C:\Users\virtualink\.config\last30days\.env
+- Project config: not active
+- Browser cookies: off; no browser stores will be read
+
+Local writes:
+- none planned
+
+Credentials:
+- Present: OpenAI API key, xAI API key, ScrapeCreators API key, GitHub token or gh auth
+- Values are not printed or written by preflight
+
+Optional commands unavailable: arxiv-pp-cli, digg-pp-cli, techmeme-pp-cli, trustpilot-pp-cli
+
+Network:
+- Available sources: reddit, tiktok, instagram, x, youtube, hackernews, polymarket, github, grounding
+
+Next: run research normally, or configure optional sources if you need more coverage.

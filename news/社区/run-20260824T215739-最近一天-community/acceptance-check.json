@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-08-25T05:45:00Z",
+  "prewrite_gate": {
+    "path": "D:\\@human\\archive\\news\\社区\\.community-prewrite-check-20260824T215739.tmp",
+    "marker": "COMMUNITY_PREWRITE_CHECK|2026-08-24|最近一天|America/Los_Angeles",
+    "raw_readback": "COMMUNITY_PREWRITE_CHECK|2026-08-24|最近一天|America/Los_Angeles",
+    "exact_marker_match": true,
+    "utf8_bom": false,
+    "byte_length": 69,
+    "deleted": true,
+    "post_delete_filename_matches": 0,
+    "post_delete_marker_matches": 0,
+    "delete_method": "apply_patch Delete File; initial Remove-Item attempt was policy-blocked and made no change"
+  },
+  "report": {
+    "path": "D:\\@human\\archive\\news\\社区\\资讯汇总-2026-08-24-最近一天.md",
+    "exists": true,
+    "byte_length": 9815,
+    "utf8_decode": true,
+    "utf8_bom": false,
+    "replacement_characters": 0,
+    "title_ok": true,
+    "date_window_ok": true,
+    "four_sections_ok": true,
+    "entry_headings": 8,
+    "original_links": 8,
+    "summary_count": 8,
+    "summary_lengths": [126, 118, 137, 130, 119, 134, 129, 151],
+    "zh_suffix_file_exists": false
+  },
+  "packs": {
+    "news_pack_items": 13,
+    "verified_report_candidates": 8,
+    "recorded_source_failures": 5,
+    "content_pack_topics": 5,
+    "content_pack_validation_ok": true,
+    "content_pack_validation_failures": 0,
+    "first_invalid_pack_preserved": true
+  },
+  "acceptance_passed": true
+}

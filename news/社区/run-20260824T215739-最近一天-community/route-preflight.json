@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-08-25T05:03:17Z",
+  "timezone": "America/Los_Angeles",
+  "window": {"label": "最近一天", "local_day": "2026-08-24", "from": "2026-08-24T00:00:00-07:00", "to": "2026-08-24T23:59:59-07:00"},
+  "route": {"intent": "recent", "status": "ready", "selected": "last30days", "fallback_authorized": false, "browser_route_selected": false},
+  "news_ops_tool_doctor": {"command": "py news-ops-skill/scripts/tool_doctor.py --json --intent recent", "status": "ready", "last30days": "installed/preflight_required", "agent_reach": "installed/ok", "side_effects": false},
+  "last30days_preflight": {"command": "python3 last30days.py --preflight", "status": "Ready to research with safe defaults", "config_source": "global:C:\\Users\\virtualink\\.config\\last30days\\.env", "project_config_active": false, "browser_cookies": "off", "local_writes_planned": "none", "available_sources": ["reddit", "tiktok", "instagram", "x", "youtube", "hackernews", "polymarket", "github", "grounding"]},
+  "last30days_doctor": {"command": "python3 last30days.py doctor --cached --json", "exit_code": 0, "engine_version": "3.14.0", "generated_at": "2026-08-25T05:03:17Z", "setup_complete": true},
+  "agent_reach_doctor": {"command": "agent-reach doctor --json", "exit_code": 0, "public_routes_ok": ["GitHub", "Twitter", "YouTube", "Reddit", "Facebook", "Instagram", "XHS", "Bilibili", "V2EX", "Exa", "Jina", "RSS"], "warnings": ["Xueqiu HTTP 400"], "off": ["Xiaoyuzhou"]},
+  "actual_acquisition": {"command_exit_code": 0, "runtime_seconds": 76.8, "quality": "3/5 core sources", "counts": {"reddit": 4, "x": 0, "youtube": 0, "tiktok": 0, "instagram": 0, "hackernews": 16, "polymarket": 0, "web": 9, "github": 5}, "failures": ["Instagram HTTP 402", "TikTok HTTP 402", "X HTTP 400 Bad Request", "YouTube HTTP 402", "Reddit backup HTTP 402 after 4 public items", "rerank HTTP 401 fallback", "fun judge HTTP 401 fallback"]},
+  "privacy": {"credential_values_recorded": false, "login_or_paywall_bypass": false}
+}

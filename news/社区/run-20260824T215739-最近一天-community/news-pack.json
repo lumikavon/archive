@@ -1,0 +1,881 @@
+{
+  "envelope": {
+    "skill": "news-ops-skill",
+    "run_id": "run-2400f089629ea7ed",
+    "executed_at": "2026-08-25T05:34:55Z",
+    "data_time_range": {
+      "from": "2026-08-24T08:14:53Z",
+      "to": "2026-08-24T20:54:21Z"
+    },
+    "workflow_phase": "adhoc",
+    "tools_used": [
+      {
+        "name": "news-ops-skill",
+        "backend": "tool_doctor+collect",
+        "status": "ok"
+      },
+      {
+        "name": "last30days",
+        "backend": "v3-native-search",
+        "status": "degraded"
+      },
+      {
+        "name": "agent-reach",
+        "backend": "doctor+public-routes",
+        "status": "ok"
+      },
+      {
+        "name": "web-search",
+        "backend": "public-web",
+        "status": "ok"
+      }
+    ],
+    "sources": {
+      "succeeded": [
+        {
+          "source": "Axios",
+          "endpoint": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+          "items": 2
+        },
+        {
+          "source": "WHQR",
+          "endpoint": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+          "items": 1
+        },
+        {
+          "source": "CNN Newsource via KESQ",
+          "endpoint": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport",
+          "items": 1
+        },
+        {
+          "source": "GitHub Releases / OpenAPITools",
+          "endpoint": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+          "items": 1
+        },
+        {
+          "source": "GitHub Releases / steipete/CodexBar",
+          "endpoint": "https://github.com/steipete/CodexBar/releases/tag/v0.55.0",
+          "items": 1
+        },
+        {
+          "source": "Suncoast Searchlight",
+          "endpoint": "https://suncoastsearchlight.org/sarasota-manatee-surge-risk-homelessness",
+          "items": 1
+        },
+        {
+          "source": "OverseerOS",
+          "endpoint": "https://www.overseeros.com/blog/what-happens-after-youtube-video-goes-viral",
+          "items": 1
+        }
+      ],
+      "failed": [
+        {
+          "source": "Instagram",
+          "endpoint": "https://www.instagram.com/",
+          "reason_code": "rate_limited",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T05:12:00Z"
+        },
+        {
+          "source": "TikTok",
+          "endpoint": "https://www.tiktok.com/",
+          "reason_code": "rate_limited",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T05:12:00Z"
+        },
+        {
+          "source": "X",
+          "endpoint": "https://x.com/",
+          "reason_code": "network_error",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T05:12:00Z"
+        },
+        {
+          "source": "YouTube",
+          "endpoint": "https://www.youtube.com/",
+          "reason_code": "rate_limited",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T05:12:00Z"
+        },
+        {
+          "source": "Reddit",
+          "endpoint": "https://www.reddit.com/",
+          "reason_code": "rate_limited",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T05:12:00Z"
+        }
+      ]
+    },
+    "confidence_notes": [],
+    "risk_flags": [
+      "one_or_more_sources_unavailable_or_unverified"
+    ],
+    "follow_up_actions": [
+      "Verify access-limited sources with a public alternative."
+    ],
+    "upstream_inputs": [
+      {
+        "skill": "caller-acquisition",
+        "run_id": "run-20260824T215739-community-acquisition",
+        "artifact_path": "D:\\@human\\archive\\news\\社区\\run-20260824T215739-最近一天-community\\acquired-records.json"
+      }
+    ]
+  },
+  "items": [
+    {
+      "item_id": "community-business-generalist-seriesb",
+      "title": "机器人 AI 公司 Generalist 披露约 2 亿美元新融资",
+      "summary": "Axios 报道机器人 AI 公司 Generalist 完成约 2 亿美元融资；配套 Form D 线索显示已售证券约 1.982 亿美元、涉及 32 名投资者。媒体所称领投方及融资轮次未由公司公告交叉确认，因此可核验核心仅限募资规模，轮次与投资人信息保留为媒体口径。",
+      "published_at": "2026-08-24T20:54:21Z",
+      "source": "Axios",
+      "url": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+      "canonical_url": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "US",
+      "entities": [],
+      "topics": [
+        "category:商业",
+        "robotics",
+        "venture-capital"
+      ],
+      "facts": [
+        "Axios 报道融资规模约 2 亿美元。",
+        "SEC Form D 线索显示已售证券 198224662 美元、32 名投资者。"
+      ],
+      "opinions": [
+        "Axios 将该交易描述为新一轮机器人 AI 融资。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-business-generalist-axios",
+          "kind": "source_excerpt",
+          "text": "Axios published on August 24, 2026 that Generalist raises another $200 million for AI robotics; the Chinese headline expresses this as about 2 hundred-million dollars. A linked Form D evidence trail reports $198,224,662 sold and 32 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "url": "https://www.axios.com/2026/08/24/robotics-ai-generalist-200m",
+          "published_at": "2026-08-24T20:54:21Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "Axios published on August 24, 2026 that Generalist raises another $200 million for AI robotics; the Chinese headline expresses this as about 2 hundred-million dollars. A linked Form D evidence trail reports $198,224,662 sold and 32 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+      "credibility": 0.82,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.9,
+      "risk_flags": [
+        "round_and_lead_investor_media_only",
+        "sec_endpoint_fetch_restricted"
+      ],
+      "cross_source_refs": [
+        {
+          "source": "SEC Form D",
+          "url": "https://www.sec.gov/Archives/edgar/data/2137708/000213770826000004/xslFormDX01/primary_doc.xml"
+        }
+      ],
+      "dedup_cluster_id": "cluster-003",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 41.04,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.9,
+        "credibility": 0.82,
+        "freshness": 0.859807098765432,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-business-blank-street-105m",
+      "title": "Blank Street Coffee 披露约 1.05 亿美元证券发行",
+      "summary": "Axios 报道连锁咖啡品牌 Blank Street Coffee 完成约 1.05 亿美元交易；Form D 线索中的发行与已售金额均为 104,999,981 美元，涉及 6 名投资者。交易中一级与二级股份的具体拆分来自媒体叙述，未见公司公开文件确认。",
+      "published_at": "2026-08-24T17:58:08Z",
+      "source": "Axios",
+      "url": "https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+      "canonical_url": "https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "US",
+      "entities": [],
+      "topics": [
+        "category:商业",
+        "consumer",
+        "venture-capital"
+      ],
+      "facts": [
+        "Axios 报道交易规模约 1.05 亿美元。",
+        "SEC Form D 线索显示发行及已售金额均为 104999981 美元、6 名投资者。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-business-blankstreet-axios",
+          "kind": "source_excerpt",
+          "text": "Axios published on August 24, 2026 that Blank Street Coffee had a $105 million transaction; the Chinese headline expresses this as about 1.05 hundred-million dollars. A Form D evidence trail reports an offering and amount sold of $104,999,981 with 6 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+          "url": "https://www.axios.com/2026/08/24/blank-street-coffee-105-million",
+          "published_at": "2026-08-24T17:58:08Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "Axios published on August 24, 2026 that Blank Street Coffee had a $105 million transaction; the Chinese headline expresses this as about 1.05 hundred-million dollars. A Form D evidence trail reports an offering and amount sold of $104,999,981 with 6 investors; the SEC endpoint was access-restricted during the parent verification pass.",
+      "credibility": 0.82,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.85,
+      "risk_flags": [
+        "primary_secondary_split_media_only",
+        "sec_endpoint_fetch_restricted"
+      ],
+      "cross_source_refs": [
+        {
+          "source": "SEC Form D",
+          "url": "https://www.sec.gov/Archives/edgar/data/1815159/000101359426000943/xslFormDX01/primary_doc.xml"
+        }
+      ],
+      "dedup_cluster_id": "cluster-004",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 39.85,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.85,
+        "credibility": 0.82,
+        "freshness": 0.8190162037037036,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-society-whqr-live-oaks",
+      "title": "保障房改造与古树保护在 Wilmington 的 Hillcrest 项目发生冲突",
+      "summary": "WHQR 报道 Wilmington Housing Authority 的 Hillcrest 一期拟移除 6 棵老橡树，以 2,570 万美元建设 84 套面向 55 岁以上人群的可负担住房；全项目规划 26 英亩、550 套住房。树木倡议者质疑生态代价，树龄及根系风险主要来自倡议者与树艺师判断。",
+      "published_at": "2026-08-24T12:06:00Z",
+      "source": "WHQR",
+      "url": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+      "canonical_url": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "US-North Carolina",
+      "entities": [],
+      "topics": [
+        "category:社会",
+        "affordable-housing",
+        "urban-environment"
+      ],
+      "facts": [
+        "一期计划移除 6 棵老橡树，预算 2570 万美元，建设 84 套 55 岁以上可负担住房。",
+        "完整项目规划 26 英亩、550 套住房。"
+      ],
+      "opinions": [
+        "树木倡议者认为工程将损害城市树冠，住房机构则继续推进项目。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-society-whqr",
+          "kind": "source_excerpt",
+          "text": "WHQR published August 24, 2026 at 8:06 AM EDT. Hillcrest Phase I is reported at $25.7 million for 84 affordable homes for people 55 and older, while six live oaks are slated for removal. The full plan is 550 homes on 26 acres.",
+          "url": "https://www.whqr.org/local/2026-08-24/tree-advocates-push-back-against-wilmington-housing-authoritys-plan-to-take-six-old-live-oaks",
+          "published_at": "2026-08-24T12:06:00Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "WHQR published August 24, 2026 at 8:06 AM EDT. Hillcrest Phase I is reported at $25.7 million for 84 affordable homes for people 55 and older, while six live oaks are slated for removal. The full plan is 550 homes on 26 acres.",
+      "credibility": 0.87,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.85,
+      "risk_flags": [
+        "advocacy_claims_on_tree_age_and_root_risk",
+        "construction_start_not_confirmed"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-008",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 39.67,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.85,
+        "credibility": 0.87,
+        "freshness": 0.7375038580246913,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-culture-aura-battles",
+      "title": "“Aura farming”从网络梗演变为拉美线下青年竞赛",
+      "summary": "CNN 经 KESQ 发布的报道显示，“aura battle”已在墨西哥、阿根廷、巴西与哥斯达黎加等地出现，参与者以短舞、动作和造型争取现场反应。巴西组织者称一场活动超过 200 人参加，相关视频有数十万播放；这些数字仍属组织者和平台显示口径。",
+      "published_at": "2026-08-24T10:00:29Z",
+      "source": "CNN Newsource via KESQ",
+      "url": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport",
+      "canonical_url": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "Latin America",
+      "entities": [],
+      "topics": [
+        "category:文化",
+        "internet-culture",
+        "youth-culture"
+      ],
+      "facts": [
+        "报道记录多个拉美国家出现线下 aura battle。",
+        "巴西活动组织者称超过 200 人参与，报道描述相关视频有数十万播放。"
+      ],
+      "opinions": [
+        "受访学者认为活动可能回应青年对线下公共空间和连接的需求。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-culture-aura-battles",
+          "kind": "source_excerpt",
+          "text": "CNN Newsource via KESQ published August 24, 2026 at 3:00 AM. It describes the phrase Aura farming and reports aura battles across Latin America; Brazilian organizer Uvitinho said more than 200 people participated, and the report says competition videos received hundreds of thousands of views.",
+          "url": "https://kesq.com/news/national-world/cnn-world/2026/08/24/aura-farming-began-as-a-meme-latin-american-youth-have-turned-it-into-a-competitive-sport/",
+          "published_at": "2026-08-24T10:00:29Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "CNN Newsource via KESQ published August 24, 2026 at 3:00 AM. It describes the phrase Aura farming and reports aura battles across Latin America; Brazilian organizer Uvitinho said more than 200 people participated, and the report says competition videos received hundreds of thousands of views.",
+      "credibility": 0.82,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.9,
+      "risk_flags": [
+        "organizer_claim",
+        "platform_metrics_not_independently_verified"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-005",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 39.22,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.9,
+        "credibility": 0.82,
+        "freshness": 0.7084490740740741,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-tech-openapi-generator-7250",
+      "title": "OpenAPI Generator 7.25.0 发布，列出 240 余项增强与修复",
+      "summary": "OpenAPI Generator 在 GitHub 发布稳定版 7.25.0，发布说明称包含 240 余项增强和缺陷修复，并明确提示存在带回退方案的破坏性变更；同时将解析器升级到 2.1.46。数量属于项目方发布说明，升级用户仍需按具体语言生成器检查兼容性。",
+      "published_at": "2026-08-24T08:18:07Z",
+      "source": "GitHub Releases / OpenAPITools",
+      "url": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+      "canonical_url": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "category:科技",
+        "open-source",
+        "api-tooling"
+      ],
+      "facts": [
+        "稳定版号为 7.25.0。",
+        "发布说明称包含 240 余项增强和修复，解析器版本更新到 2.1.46。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-tech-openapi-7250",
+          "kind": "source_excerpt",
+          "text": "OpenAPI Generator version 7.25 patch 0, written v7.25.0, was released on 24 Aug at 08:18. The release says the stable release has breaking changes with fallbacks, 240+ enhancements and bug fixes, and updates the parser to 2.1.46.",
+          "url": "https://github.com/OpenAPITools/openapi-generator/releases/tag/v7.25.0",
+          "published_at": "2026-08-24T08:18:07Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "OpenAPI Generator version 7.25 patch 0, written v7.25.0, was released on 24 Aug at 08:18. The release says the stable release has breaking changes with fallbacks, 240+ enhancements and bug fixes, and updates the parser to 2.1.46.",
+      "credibility": 0.9,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.8,
+      "risk_flags": [
+        "breaking_changes_with_fallbacks",
+        "maintainer_release_metrics"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-002",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 38.82,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.8,
+        "credibility": 0.9,
+        "freshness": 0.6847530864197531,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-tech-codexbar-0550",
+      "title": "CodexBar 0.55.0 将 3.5 万条日志的消费刷新从约 12 秒降至约 3 秒",
+      "summary": "CodexBar 在 GitHub 发布 0.55.0，性能说明称对 3.5 万条使用日志逐条只定价一次，并复用模型目录与价格覆盖，使 OpenCodex 消费刷新由约 12 秒降至约 3 秒且输出不变。该数字来自项目维护者给出的单一基准，未见独立复测。",
+      "published_at": "2026-08-24T08:14:53Z",
+      "source": "GitHub Releases / steipete/CodexBar",
+      "url": "https://github.com/steipete/CodexBar/releases/tag/v0.55.0",
+      "canonical_url": "https://github.com/steipete/CodexBar/releases/tag/v0.55.0",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "category:科技",
+        "open-source",
+        "developer-tools"
+      ],
+      "facts": [
+        "版本号为 0.55.0。",
+        "项目基准使用 3.5 万条日志，刷新时间由约 12 秒降至约 3 秒。"
+      ],
+      "opinions": [
+        "维护者称优化前后输出一致。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-tech-codexbar-0550",
+          "kind": "source_excerpt",
+          "text": "CodexBar 0.55.0 was released on 24 Aug at 08:14. Its performance note says OpenCodex spend refresh drops from about 12 seconds to about 3 seconds on a 35k-entry log with identical output.",
+          "url": "https://github.com/steipete/CodexBar/releases/tag/v0.55.0",
+          "published_at": "2026-08-24T08:14:53Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "CodexBar 0.55.0 was released on 24 Aug at 08:14. Its performance note says OpenCodex spend refresh drops from about 12 seconds to about 3 seconds on a 35k-entry log with identical output.",
+      "credibility": 0.9,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.8,
+      "risk_flags": [
+        "no_independent_reproduction",
+        "single_project_benchmark"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-001",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 38.81,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.8,
+        "credibility": 0.9,
+        "freshness": 0.6840046296296296,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-society-suncoast-homelessness",
+      "title": "萨拉索塔与马纳蒂无家可归风险人数三年增至逾 5,000 人",
+      "summary": "Suncoast Searchlight 引述当地服务机构数据称，2026 年面临失去住所风险者超过 5,000 人，2023 年不足 3,000 人；同期单夜 PIT 无家可归统计从 1,150 人降至 931 人，约降 20%。两组指标定义与统计窗口不同，不能据此断言总体住房困境同步改善。",
+      "published_at": "2026-08-24T08:45:00Z",
+      "source": "Suncoast Searchlight",
+      "url": "https://suncoastsearchlight.org/sarasota-manatee-surge-risk-homelessness",
+      "canonical_url": "https://suncoastsearchlight.org/sarasota-manatee-surge-risk-homelessness",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "US-Florida",
+      "entities": [],
+      "topics": [
+        "category:社会",
+        "housing",
+        "homelessness"
+      ],
+      "facts": [
+        "服务机构称 2026 年风险人群超过 5000 人，2023 年不足 3000 人。",
+        "PIT 单夜统计从 2023 年 1150 人降至 2026 年 931 人，约下降 20%。"
+      ],
+      "opinions": [
+        "报道将风险人数上升与生活成本压力联系起来。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-society-suncoast",
+          "kind": "source_excerpt",
+          "text": "Suncoast Searchlight published August 24, 2026 at 4:45 AM. Local organizations counted more than 5,000 people at risk of homelessness in 2026, up from just under 3,000 in 2023. The annual PIT count was 931, down almost 20% from 1,150 in 2023.",
+          "url": "https://suncoastsearchlight.org/sarasota-manatee-surge-risk-homelessness/",
+          "published_at": "2026-08-24T08:45:00Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "Suncoast Searchlight published August 24, 2026 at 4:45 AM. Local organizations counted more than 5,000 people at risk of homelessness in 2026, up from just under 3,000 in 2023. The annual PIT count was 931, down almost 20% from 1,150 in 2023.",
+      "credibility": 0.85,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.85,
+      "risk_flags": [
+        "different_measurement_definitions",
+        "service_provider_data"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-007",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 38.79,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.85,
+        "credibility": 0.85,
+        "freshness": 0.6909760802469136,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "community-culture-youtube-breakout-study",
+      "title": "563 个 YouTube 爆款样本显示后续视频通常回落但仍高于旧基线",
+      "summary": "OverseerOS 公布对 152 个频道、563 次爆款及 1,416 个后续视频的观察研究：首个后续视频中位数为旧基线的 1.34 倍，59.9% 达到或超过基线，23.3% 再次达到至少 3 倍。研究方明确说明这是观察性样本，不能证明爆款会因果性推高后续流量。",
+      "published_at": "2026-08-24T09:37:25Z",
+      "source": "OverseerOS",
+      "url": "https://www.overseeros.com/blog/what-happens-after-youtube-video-goes-viral",
+      "canonical_url": "https://www.overseeros.com/blog/what-happens-after-youtube-video-goes-viral",
+      "author": null,
+      "collected_at": "2026-08-25T05:34:55Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "category:文化",
+        "creator-economy",
+        "youtube"
+      ],
+      "facts": [
+        "研究样本含 563 次爆款、152 个频道和 1416 个不同后续视频。",
+        "首个后续视频中位数为旧基线 1.34 倍，59.9% 不低于基线，23.3% 至少为 3 倍。"
+      ],
+      "opinions": [
+        "研究方建议不要把爆款峰值当作新的常态基准。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-culture-youtube-study",
+          "kind": "source_excerpt",
+          "text": "OverseerOS published August 24, 2026. It analyzed 563 breakout events across 152 channels and 1,416 distinct follow-up videos. The median next upload was 1.34x baseline; 59.9% were at or above baseline and 23.3% reached at least 3x. The authors call the study observational and say it does not prove causation.",
+          "url": "https://www.overseeros.com/blog/what-happens-after-youtube-video-goes-viral",
+          "published_at": "2026-08-24T09:37:25Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "OverseerOS published August 24, 2026. It analyzed 563 breakout events across 152 channels and 1,416 distinct follow-up videos. The median next upload was 1.34x baseline; 59.9% were at or above baseline and 23.3% reached at least 3x. The authors call the study observational and say it does not prove causation.",
+      "credibility": 0.75,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.9,
+      "risk_flags": [
+        "no_causal_inference",
+        "vendor_observational_study"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-006",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 38.04,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.9,
+        "credibility": 0.75,
+        "freshness": 0.7031095679012346,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "item-983c1cbf3f",
+      "title": "Instagram acquisition failure",
+      "summary": "last30days 返回 HTTP 402，未获得可验证条目。",
+      "published_at": "2026-08-24T12:00:00Z",
+      "source": "Instagram",
+      "url": "https://www.instagram.com/",
+      "canonical_url": "https://www.instagram.com/",
+      "author": null,
+      "collected_at": "2026-08-25T05:12:00Z",
+      "language": "zh-CN",
+      "region": "unknown",
+      "entities": [],
+      "topics": [
+        "acquisition-failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "",
+      "credibility": 0.5,
+      "content_type": "fact",
+      "access_status": "rate_limited",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_rate_limited"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-009",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.5,
+        "freshness": 0.7361149691358024,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "item-ab50789433",
+      "title": "Reddit partial acquisition failure",
+      "summary": "公开接口取得 4 条后，备用 ScrapeCreators 路由返回 HTTP 402；标记为部分失败。",
+      "published_at": "2026-08-24T12:00:00Z",
+      "source": "Reddit",
+      "url": "https://www.reddit.com/",
+      "canonical_url": "https://www.reddit.com/",
+      "author": null,
+      "collected_at": "2026-08-25T05:12:00Z",
+      "language": "zh-CN",
+      "region": "unknown",
+      "entities": [],
+      "topics": [
+        "acquisition-failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "",
+      "credibility": 0.5,
+      "content_type": "fact",
+      "access_status": "rate_limited",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_rate_limited"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-013",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.5,
+        "freshness": 0.7361149691358024,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "item-ee785f108f",
+      "title": "TikTok acquisition failure",
+      "summary": "last30days 返回 HTTP 402，未获得可验证条目。",
+      "published_at": "2026-08-24T12:00:00Z",
+      "source": "TikTok",
+      "url": "https://www.tiktok.com/",
+      "canonical_url": "https://www.tiktok.com/",
+      "author": null,
+      "collected_at": "2026-08-25T05:12:00Z",
+      "language": "zh-CN",
+      "region": "unknown",
+      "entities": [],
+      "topics": [
+        "acquisition-failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "",
+      "credibility": 0.5,
+      "content_type": "fact",
+      "access_status": "rate_limited",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_rate_limited"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-010",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.5,
+        "freshness": 0.7361149691358024,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "item-7fe07561e0",
+      "title": "X acquisition failure",
+      "summary": "last30days 原生搜索返回 HTTP 400 Bad Request，未获得可验证条目。",
+      "published_at": "2026-08-24T12:00:00Z",
+      "source": "X",
+      "url": "https://x.com/",
+      "canonical_url": "https://x.com/",
+      "author": null,
+      "collected_at": "2026-08-25T05:12:00Z",
+      "language": "zh-CN",
+      "region": "unknown",
+      "entities": [],
+      "topics": [
+        "acquisition-failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "",
+      "credibility": 0.5,
+      "content_type": "fact",
+      "access_status": "network_error",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_network_error"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-011",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.5,
+        "freshness": 0.7361149691358024,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "item-14afb6417c",
+      "title": "YouTube acquisition failure",
+      "summary": "last30days 返回 HTTP 402，未获得可验证条目。",
+      "published_at": "2026-08-24T12:00:00Z",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/",
+      "canonical_url": "https://www.youtube.com/",
+      "author": null,
+      "collected_at": "2026-08-25T05:12:00Z",
+      "language": "zh-CN",
+      "region": "unknown",
+      "entities": [],
+      "topics": [
+        "acquisition-failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "",
+      "credibility": 0.5,
+      "content_type": "fact",
+      "access_status": "rate_limited",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_rate_limited"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-012",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.5,
+        "freshness": 0.7361149691358024,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    }
+  ]
+}

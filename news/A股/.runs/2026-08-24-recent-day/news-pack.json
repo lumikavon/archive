@@ -1,0 +1,1197 @@
+{
+  "envelope": {
+    "skill": "news-ops-skill",
+    "run_id": "run-70c6d6e39722b03c",
+    "executed_at": "2026-08-25T04:49:28Z",
+    "data_time_range": {
+      "from": "2026-08-24T01:20:00Z",
+      "to": "2026-08-24T20:18:34Z"
+    },
+    "workflow_phase": "adhoc",
+    "tools_used": [
+      {
+        "name": "last30days",
+        "backend": "last30days.py",
+        "status": "degraded"
+      },
+      {
+        "name": "web.run",
+        "backend": "web.run",
+        "status": "ok"
+      },
+      {
+        "name": "agent-reach",
+        "backend": "agent-reach",
+        "status": "ok"
+      }
+    ],
+    "sources": {
+      "succeeded": [
+        {
+          "source": "中国金融信息网/新华财经",
+          "endpoint": "https://www.cnfin.com/gs-lb/detail/20260824/4459430_1.html",
+          "items": 2
+        },
+        {
+          "source": "21世纪经济报道/新浪财经",
+          "endpoint": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkzxr0068368.shtml",
+          "items": 2
+        },
+        {
+          "source": "同花顺",
+          "endpoint": "https://news.10jqka.com.cn/20260824/c679220727.shtml",
+          "items": 1
+        },
+        {
+          "source": "AP News",
+          "endpoint": "https://apnews.com/article/8313c751e57d70d1556f679eb0f2a8cb",
+          "items": 1
+        },
+        {
+          "source": "东方财富",
+          "endpoint": "https://wap.eastmoney.com/a/202608243851214749.html",
+          "items": 1
+        },
+        {
+          "source": "观点网/新浪财经",
+          "endpoint": "https://finance.sina.com.cn/stock/estate/integration/2026-08-24/doc-inipmhfn9987593.shtml",
+          "items": 1
+        },
+        {
+          "source": "Federal Reserve H.15",
+          "endpoint": "https://www.federalreserve.gov/releases/h15",
+          "items": 1
+        },
+        {
+          "source": "同花顺/公司投资者问答",
+          "endpoint": "https://news.10jqka.com.cn/20260824/c679237157.shtml",
+          "items": 1
+        },
+        {
+          "source": "证券时报",
+          "endpoint": "https://stcn.com/article/detail/4106177.html",
+          "items": 1
+        },
+        {
+          "source": "新华财经/中国金融信息网",
+          "endpoint": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkzxw2937285.shtml",
+          "items": 1
+        },
+        {
+          "source": "香港中通社",
+          "endpoint": "https://hkcna.hk/h5/docDetail.jsp?channel=2812&id=101403276",
+          "items": 1
+        }
+      ],
+      "failed": [
+        {
+          "source": "X/Twitter",
+          "endpoint": "https://x.com/",
+          "reason_code": "network_error",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T04:49:28Z"
+        },
+        {
+          "source": "YouTube",
+          "endpoint": "https://www.youtube.com/",
+          "reason_code": "login_required",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T04:49:28Z"
+        },
+        {
+          "source": "TikTok",
+          "endpoint": "https://www.tiktok.com/",
+          "reason_code": "rate_limited",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T04:49:28Z"
+        },
+        {
+          "source": "Instagram",
+          "endpoint": "https://www.instagram.com/",
+          "reason_code": "rate_limited",
+          "detail": "Source was not treated as verified evidence.",
+          "attempted_at": "2026-08-25T04:49:28Z"
+        }
+      ]
+    },
+    "confidence_notes": [],
+    "risk_flags": [
+      "one_or_more_sources_unavailable_or_unverified"
+    ],
+    "follow_up_actions": [
+      "Verify access-limited sources with a public alternative."
+    ],
+    "upstream_inputs": [
+      {
+        "skill": "host-research",
+        "run_id": "astock-host-2026-08-24-recent-day",
+        "artifact_path": "D:\\@human\\archive\\news\\A股\\.runs\\2026-08-24-recent-day\\host-evidence.json"
+      }
+    ]
+  },
+  "items": [
+    {
+      "item_id": "astock-close-cnfin-20260824",
+      "title": "A股主要指数8月24日收盘走弱，三市成交额约2.02万亿元",
+      "summary": "新华财经报道8月24日沪深主要指数下跌，三市成交额约2.02万亿元，较前一交易日增加约1291亿元。",
+      "published_at": "2026-08-24T15:30:00+08:00",
+      "source": "中国金融信息网/新华财经",
+      "url": "https://www.cnfin.com/gs-lb/detail/20260824/4459430_1.html",
+      "canonical_url": "https://www.cnfin.com/gs-lb/detail/20260824/4459430_1.html",
+      "author": "新华财经",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "上证指数",
+        "深证成指",
+        "创业板指",
+        "科创综指"
+      ],
+      "topics": [
+        "A股收盘",
+        "成交额",
+        "指数"
+      ],
+      "facts": [
+        "8月24日上证指数收于3882.01点，下跌0.59%。",
+        "深证成指收于13794.29点，下跌2.13%；创业板指收于3431.89点，下跌3.21%。",
+        "沪深京三市成交额约20214亿元，较前一交易日增加约1291亿元。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-astock-close-cnfin-20260824",
+          "kind": "market_report",
+          "text": "新华财经8月24日报道：上证指数3882.01点、下跌0.59%；深证成指13794.29点、下跌2.13%；创业板指3431.89点、下跌3.21%；沪深京三市成交额约20214亿元，较前一交易日增加约1291亿元。",
+          "url": "https://www.cnfin.com/gs-lb/detail/20260824/4459430_1.html",
+          "published_at": "2026-08-24T15:30:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "上证指数3882.01点，深证成指13794.29点，创业板指3431.89点；三市成交额约20214亿元。",
+      "credibility": 0.9,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.2,
+      "relevance_to_astock": 1.0,
+      "relevance_to_content": 0.9,
+      "risk_flags": [
+        "close_data_is_session_snapshot"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-001",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 62.89,
+      "priority_components": {
+        "startup": 0.2,
+        "astock": 1.0,
+        "content": 0.9,
+        "credibility": 0.9,
+        "freshness": 0.7073456790123457,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "astock-breadth-sina-20260824",
+      "title": "21世纪经济报道：8月24日两市近四千只个股下跌，煤炭银行等相对强",
+      "summary": "21世纪经济报道经新浪财经转载的收盘综述给出另一套市场宽度口径，并指出煤炭、银行、白酒、保险相对强，医药、CRO、创新药及部分算力硬件走弱。",
+      "published_at": "2026-08-24T15:47:00+08:00",
+      "source": "21世纪经济报道/新浪财经",
+      "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkzxr0068368.shtml",
+      "canonical_url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkzxr0068368.shtml",
+      "author": "21世纪经济报道",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "煤炭",
+        "银行",
+        "白酒",
+        "保险",
+        "医药",
+        "CRO",
+        "算力硬件"
+      ],
+      "topics": [
+        "市场宽度",
+        "行业轮动",
+        "A股收盘"
+      ],
+      "facts": [
+        "该报道记录1456只个股上涨、3959只下跌、124只平盘。",
+        "报道描述煤炭、银行、白酒、保险相对强，医药、CRO、创新药及部分计算硬件走弱。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-astock-breadth-sina-20260824",
+          "kind": "market_report",
+          "text": "21世纪经济报道8月24日收盘综述记录1456只上涨、3959只下跌、124只平盘，并描述煤炭、银行、白酒、保险相对强，医药、CRO、创新药及部分算力硬件走弱。",
+          "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkzxr0068368.shtml",
+          "published_at": "2026-08-24T15:47:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "21世纪经济报道口径：1456只上涨、3959只下跌、124只平盘。",
+      "credibility": 0.8,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.15,
+      "relevance_to_astock": 0.95,
+      "relevance_to_content": 0.8,
+      "risk_flags": [
+        "conflicts_with_10jqka_breadth_counts"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-003",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 57.94,
+      "priority_components": {
+        "startup": 0.15,
+        "astock": 0.95,
+        "content": 0.8,
+        "credibility": 0.8,
+        "freshness": 0.7112808641975309,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "astock-breadth-10jqka-20260824",
+      "title": "同花顺：8月24日多数行业与个股下跌，贵金属和煤炭相对强",
+      "summary": "同花顺收盘数据称当日上涨个股1432只、下跌3913只；贵金属、煤炭和保险相对强，生物科技、元件和医疗服务偏弱。页面带有AI生成免责声明，数字只作来源口径记录。",
+      "published_at": "2026-08-24T15:30:00+08:00",
+      "source": "同花顺",
+      "url": "https://news.10jqka.com.cn/20260824/c679220727.shtml",
+      "canonical_url": "https://news.10jqka.com.cn/20260824/c679220727.shtml",
+      "author": "同花顺财经",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "贵金属",
+        "煤炭",
+        "保险",
+        "生物科技",
+        "医疗服务"
+      ],
+      "topics": [
+        "市场宽度",
+        "行业涨跌",
+        "板块"
+      ],
+      "facts": [
+        "同花顺页面记录1432只个股上涨、3913只下跌、116只平盘。",
+        "页面记录贵金属、煤炭、保险涨幅居前，生物科技、元件、医疗服务相对弱。"
+      ],
+      "opinions": [
+        "该页面明确提示AI生成内容免责声明，需与其他行情口径交叉核对。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-astock-breadth-10jqka-20260824",
+          "kind": "market_report",
+          "text": "同花顺8月24日页面记录：1432只上涨、3913只下跌、116只平盘；贵金属、煤炭、保险相对强，生物科技、元件、医疗服务相对弱。页面同时提示AI生成免责声明。",
+          "url": "https://news.10jqka.com.cn/20260824/c679220727.shtml",
+          "published_at": "2026-08-24T15:30:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "同花顺口径：1432只上涨、3913只下跌、116只平盘；贵金属和煤炭相对强。",
+      "credibility": 0.72,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.15,
+      "relevance_to_astock": 0.95,
+      "relevance_to_content": 0.8,
+      "risk_flags": [
+        "ai_generated_disclaimer",
+        "third_party_breadth_definition"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-002",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 56.61,
+      "priority_components": {
+        "startup": 0.15,
+        "astock": 0.95,
+        "content": 0.8,
+        "credibility": 0.72,
+        "freshness": 0.7073456790123457,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "optical-turnover-sina-20260824",
+      "title": "8月24日A股成交额靠前个股集中在光模块、存储与AI芯片",
+      "summary": "21世纪经济报道经新浪财经转载的盘后数据列示中际旭创、新易盛、兆易创新、寒武纪、长鑫科技等成交额靠前；成交额本身不代表基本面或趋势确认。",
+      "published_at": "2026-08-24T16:24:00+08:00",
+      "source": "21世纪经济报道/新浪财经",
+      "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipmhfu2815320.shtml",
+      "canonical_url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipmhfu2815320.shtml",
+      "author": "21世纪经济报道",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "中际旭创",
+        "新易盛",
+        "兆易创新",
+        "寒武纪",
+        "长鑫科技"
+      ],
+      "topics": [
+        "成交额",
+        "光模块",
+        "存储",
+        "AI芯片"
+      ],
+      "facts": [
+        "报道列示中际旭创、新易盛、兆易创新、寒武纪、长鑫科技为当日成交额靠前个股。",
+        "报道记录沪深成交额约2.01万亿元，较前一日增加约1281.92亿元。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-optical-turnover-sina-20260824",
+          "kind": "market_report",
+          "text": "21世纪经济报道8月24日盘后数据列示中际旭创、新易盛、兆易创新、寒武纪、长鑫科技等成交额靠前，并记录沪深成交额约2.01万亿元、较前一日增加约1281.92亿元。",
+          "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipmhfu2815320.shtml",
+          "published_at": "2026-08-24T16:24:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "成交额靠前个股包括中际旭创、新易盛、兆易创新、寒武纪、长鑫科技。",
+      "credibility": 0.8,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.15,
+      "relevance_to_astock": 0.9,
+      "relevance_to_content": 0.75,
+      "risk_flags": [
+        "turnover_is_not_fundamental_confirmation"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-009",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 56.44,
+      "priority_components": {
+        "startup": 0.15,
+        "astock": 0.9,
+        "content": 0.75,
+        "credibility": 0.8,
+        "freshness": 0.7198456790123458,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "pboc-repo-cnfin-20260824",
+      "title": "央行8月24日开展3400亿元7天期逆回购",
+      "summary": "新华财经报道人民银行以固定利率、数量招标方式开展3400亿元7天期逆回购操作，利率1.40%，当日无到期，形成净投放3400亿元。",
+      "published_at": "2026-08-24T09:20:00+08:00",
+      "source": "中国金融信息网/新华财经",
+      "url": "https://www.cnfin.com/hb-lb/detail/20260824/4459671_1.html",
+      "canonical_url": "https://www.cnfin.com/hb-lb/detail/20260824/4459671_1.html",
+      "author": "新华财经",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "中国人民银行",
+        "逆回购",
+        "DR007",
+        "Shibor"
+      ],
+      "topics": [
+        "货币市场",
+        "流动性",
+        "央行操作"
+      ],
+      "facts": [
+        "人民银行开展3400亿元7天期逆回购，操作利率1.40%。",
+        "当日无逆回购到期，按该报道口径实现净投放3400亿元。",
+        "报道同时列示隔夜Shibor和DR007等资金价格。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-pboc-repo-cnfin-20260824",
+          "kind": "official_operation_report",
+          "text": "新华财经8月24日报道：人民银行开展3400亿元7天期逆回购，利率1.40%，当日无到期，净投放3400亿元。",
+          "url": "https://www.cnfin.com/hb-lb/detail/20260824/4459671_1.html",
+          "published_at": "2026-08-24T09:20:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "7天期逆回购3400亿元，利率1.40%，当日净投放3400亿元。",
+      "credibility": 0.9,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.1,
+      "relevance_to_astock": 0.9,
+      "relevance_to_content": 0.72,
+      "risk_flags": [
+        "liquidity_effect_is_inference"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-006",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 55.34,
+      "priority_components": {
+        "startup": 0.1,
+        "astock": 0.9,
+        "content": 0.72,
+        "credibility": 0.9,
+        "freshness": 0.6216975308641974,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "us-close-ap-20260824",
+      "title": "美股8月24日收盘分化，纳指下跌而道指上涨",
+      "summary": "AP报道8月24日美股收盘分化：标普500下跌0.3%，道指上涨0.3%，纳斯达克下跌0.8%；报道提到油价回落和等待英伟达财报等背景。",
+      "published_at": "2026-08-24T20:18:34Z",
+      "source": "AP News",
+      "url": "https://apnews.com/article/8313c751e57d70d1556f679eb0f2a8cb",
+      "canonical_url": "https://apnews.com/article/8313c751e57d70d1556f679eb0f2a8cb",
+      "author": "The Associated Press",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "en",
+      "region": "United States",
+      "entities": [
+        "S&P 500",
+        "Dow Jones",
+        "Nasdaq",
+        "Nvidia"
+      ],
+      "topics": [
+        "美股",
+        "海外宏观",
+        "AI估值"
+      ],
+      "facts": [
+        "AP记录标普500收于7652.86点，下跌0.3%。",
+        "道琼斯工业平均指数收于53417.16点，上涨0.3%；纳斯达克综合指数收于25980.19点，下跌0.8%。"
+      ],
+      "opinions": [
+        "AP将科技股走弱与AI热度和芯片需求盈利可持续性的担忧并列为市场背景。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-us-close-ap-20260824",
+          "kind": "market_report",
+          "text": "AP 8月24日报道：标普500收于7652.86点、下跌0.3%；道指收于53417.16点、上涨0.3%；纳斯达克收于25980.19点、下跌0.8%。",
+          "url": "https://apnews.com/article/8313c751e57d70d1556f679eb0f2a8cb",
+          "published_at": "2026-08-24T20:18:34Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "标普500跌0.3%，道指涨0.3%，纳指跌0.8%。",
+      "credibility": 0.86,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.1,
+      "relevance_to_astock": 0.72,
+      "relevance_to_content": 0.72,
+      "risk_flags": [
+        "overseas_signal_not_direct_causality"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-010",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 54.62,
+      "priority_components": {
+        "startup": 0.1,
+        "astock": 0.72,
+        "content": 0.72,
+        "credibility": 0.86,
+        "freshness": 0.8852546296296296,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "astock-northbound-eastmoney-20260824",
+      "title": "北向相关数据：8月24日成交额约2910.35亿元，占两市成交额14.50%",
+      "summary": "东方财富转载数据记录北向相关交易成交额和活跃个股，属于第三方行情统计，不等同于监管公告。",
+      "published_at": "2026-08-24T16:20:00+08:00",
+      "source": "东方财富",
+      "url": "https://wap.eastmoney.com/a/202608243851214749.html",
+      "canonical_url": "https://wap.eastmoney.com/a/202608243851214749.html",
+      "author": "东方财富",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "北向资金",
+        "中际旭创",
+        "新易盛",
+        "寒武纪",
+        "紫金矿业"
+      ],
+      "topics": [
+        "北向资金",
+        "成交额",
+        "资金流"
+      ],
+      "facts": [
+        "页面记录8月24日北向相关成交额约2910.35亿元，占两市成交额14.50%。",
+        "页面列出沪股通寒武纪、紫金矿业、药明康德及深股通中际旭创、新易盛等活跃标的。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-astock-northbound-eastmoney-20260824",
+          "kind": "market_data",
+          "text": "东方财富8月24日数据：北向相关成交额约2910.35亿元，占两市成交额14.50%；页面列出寒武纪、紫金矿业、药明康德、中际旭创和新易盛等活跃标的。",
+          "url": "https://wap.eastmoney.com/a/202608243851214749.html",
+          "published_at": "2026-08-24T16:20:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "北向相关成交额约2910.35亿元，占两市成交额14.50%。",
+      "credibility": 0.76,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.1,
+      "relevance_to_astock": 0.9,
+      "relevance_to_content": 0.72,
+      "risk_flags": [
+        "not_a_regulatory_disclosure",
+        "third_party_flow_statistics"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-004",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 54.27,
+      "priority_components": {
+        "startup": 0.1,
+        "astock": 0.9,
+        "content": 0.72,
+        "credibility": 0.76,
+        "freshness": 0.7189197530864198,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "astock-mainfund-sina-20260824",
+      "title": "第三方资金统计：8月24日主力资金净流出约799.33亿元",
+      "summary": "新浪财经转载的观点网统计显示主力资金净流出约799.33亿元；该指标为第三方口径，不与官方资金数据混用。",
+      "published_at": "2026-08-24T16:39:00+08:00",
+      "source": "观点网/新浪财经",
+      "url": "https://finance.sina.com.cn/stock/estate/integration/2026-08-24/doc-inipmhfn9987593.shtml",
+      "canonical_url": "https://finance.sina.com.cn/stock/estate/integration/2026-08-24/doc-inipmhfn9987593.shtml",
+      "author": "观点网",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "主力资金",
+        "大单",
+        "小单"
+      ],
+      "topics": [
+        "资金流",
+        "市场情绪"
+      ],
+      "facts": [
+        "该统计记录主力资金净流出约799.33亿元。",
+        "同一统计记录大单净流出约375.12亿元、小单净流入约561.82亿元。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-astock-mainfund-sina-20260824",
+          "kind": "third_party_flow_data",
+          "text": "观点网经新浪财经转载的8月24日统计：主力资金净流出约799.33亿元，大单净流出约375.12亿元，小单净流入约561.82亿元。",
+          "url": "https://finance.sina.com.cn/stock/estate/integration/2026-08-24/doc-inipmhfn9987593.shtml",
+          "published_at": "2026-08-24T16:39:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "第三方统计主力资金净流出约799.33亿元。",
+      "credibility": 0.65,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.1,
+      "relevance_to_astock": 0.88,
+      "relevance_to_content": 0.68,
+      "risk_flags": [
+        "do_not_treat_as_official_flow",
+        "third_party_methodology"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-005",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 51.64,
+      "priority_components": {
+        "startup": 0.1,
+        "astock": 0.88,
+        "content": 0.68,
+        "credibility": 0.65,
+        "freshness": 0.7233179012345679,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "fed-h15-20260824",
+      "title": "美联储H.15在8月24日发布的最新表格列示10年期美债8月21日收益率4.74%",
+      "summary": "美联储H.15日度利率页面于8月24日发布，表格最新列为8月21日；10年期国债恒定期限收益率为4.74%，30年期为5.27%。",
+      "published_at": "2026-08-24T16:15:00Z",
+      "source": "Federal Reserve H.15",
+      "url": "https://www.federalreserve.gov/releases/h15",
+      "canonical_url": "https://www.federalreserve.gov/releases/h15",
+      "author": "Federal Reserve Board",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "en",
+      "region": "United States",
+      "entities": [
+        "US Treasury",
+        "10-year yield",
+        "30-year yield"
+      ],
+      "topics": [
+        "美债收益率",
+        "利率",
+        "海外宏观"
+      ],
+      "facts": [
+        "H.15页面发布日期为2026年8月24日，最新一列数据日期为8月21日。",
+        "8月21日10年期美国国债恒定期限收益率为4.74%，30年期为5.27%。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-fed-h15-20260824",
+          "kind": "official_rate_table",
+          "text": "Federal Reserve H.15页面于2026年8月24日发布；表格8月21日列示10年期美国国债恒定期限收益率4.74%、30年期5.27%。",
+          "url": "https://www.federalreserve.gov/releases/h15/",
+          "published_at": "2026-08-24T16:15:00Z",
+          "verified": true
+        }
+      ],
+      "excerpt": "H.15最新列：8月21日10年期4.74%，30年期5.27%。",
+      "credibility": 0.98,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.05,
+      "relevance_to_astock": 0.62,
+      "relevance_to_content": 0.62,
+      "risk_flags": [
+        "latest_rate_date_is_aug21_not_aug24"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-011",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 51.57,
+      "priority_components": {
+        "startup": 0.05,
+        "astock": 0.62,
+        "content": 0.62,
+        "credibility": 0.98,
+        "freshness": 0.8288734567901235,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "lihua-kechuang-qna-20260824",
+      "title": "丽华科创投资者问答披露上半年投资项目与AI方向占比",
+      "summary": "同花顺转载的投资者问答称，丽华科创上半年新增33个投资项目，其中AI和具身智能方向占39%；这是公司问答口径，需结合正式公告和财报核验。",
+      "published_at": "2026-08-24T16:00:00+08:00",
+      "source": "同花顺/公司投资者问答",
+      "url": "https://news.10jqka.com.cn/20260824/c679237157.shtml",
+      "canonical_url": "https://news.10jqka.com.cn/20260824/c679237157.shtml",
+      "author": "公司投资者关系活动",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国",
+      "entities": [
+        "丽华科创",
+        "AI",
+        "具身智能"
+      ],
+      "topics": [
+        "公司动态",
+        "AI产业链",
+        "投资者问答"
+      ],
+      "facts": [
+        "公司投资者问答口径称上半年新增33个投资项目。",
+        "问答称AI和具身智能方向占新增项目的39%。"
+      ],
+      "opinions": [
+        "公司问答是自述材料，不等同于独立审计或监管确认。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-lihua-kechuang-qna-20260824",
+          "kind": "investor_qna",
+          "text": "同花顺8月24日转载的公司投资者问答：公司称上半年新增33个投资项目，AI和具身智能方向占39%。",
+          "url": "https://news.10jqka.com.cn/20260824/c679237157.shtml",
+          "published_at": "2026-08-24T16:00:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "公司问答称上半年新增33个项目，AI和具身智能占39%。",
+      "credibility": 0.62,
+      "content_type": "marketing",
+      "access_status": "ok",
+      "relevance_to_startup": 0.25,
+      "relevance_to_astock": 0.62,
+      "relevance_to_content": 0.72,
+      "risk_flags": [
+        "company_self_report",
+        "requires_announcement_check"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-008",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 50.23,
+      "priority_components": {
+        "startup": 0.25,
+        "astock": 0.62,
+        "content": 0.72,
+        "credibility": 0.62,
+        "freshness": 0.7142901234567901,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "southbound-stcn-20260824",
+      "title": "南向资金8月24日净买入约115.67亿港元",
+      "summary": "证券时报报道8月24日南向资金净买入约115.67亿港元；该数据用于港股风险偏好观察，不直接代表A股资金方向。",
+      "published_at": "2026-08-24T22:43:00+08:00",
+      "source": "证券时报",
+      "url": "https://stcn.com/article/detail/4106177.html",
+      "canonical_url": "https://stcn.com/article/detail/4106177.html",
+      "author": "证券时报",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国香港",
+      "entities": [
+        "南向资金",
+        "恒生指数",
+        "恒生科技指数"
+      ],
+      "topics": [
+        "港股",
+        "跨境资金",
+        "风险偏好"
+      ],
+      "facts": [
+        "证券时报记录8月24日南向资金净买入约115.67亿港元。",
+        "报道同时记录恒生指数收报25517.33点，下跌1.89%。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-southbound-stcn-20260824",
+          "kind": "market_data",
+          "text": "证券时报8月24日报道：南向资金净买入约115.67亿港元；恒生指数收报25517.33点，下跌1.89%。",
+          "url": "https://stcn.com/article/detail/4106177.html",
+          "published_at": "2026-08-24T22:43:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "南向资金净买入约115.67亿港元，恒生指数下跌1.89%。",
+      "credibility": 0.82,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.05,
+      "relevance_to_astock": 0.65,
+      "relevance_to_content": 0.6,
+      "risk_flags": [
+        "hong_kong_data_not_a_share_flow"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-007",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 49.01,
+      "priority_components": {
+        "startup": 0.05,
+        "astock": 0.65,
+        "content": 0.6,
+        "credibility": 0.82,
+        "freshness": 0.8075771604938271,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "nikkei-xinhua-20260824",
+      "title": "日本股市8月24日分化，日经225下跌0.74%",
+      "summary": "新华财经东京报道8月24日日经225下跌0.74%，东证指数上涨0.15%；报道提到高估值AI和半导体股承压。",
+      "published_at": "2026-08-24T16:04:00+08:00",
+      "source": "新华财经/中国金融信息网",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkzxw2937285.shtml",
+      "canonical_url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkzxw2937285.shtml",
+      "author": "新华财经",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "日本",
+      "entities": [
+        "日经225",
+        "东证指数",
+        "AI",
+        "半导体"
+      ],
+      "topics": [
+        "日本股市",
+        "海外市场",
+        "半导体"
+      ],
+      "facts": [
+        "日经225收盘下跌0.74%，收于65528.09点。",
+        "东京证券交易所指数上涨0.15%，收于4073.29点。"
+      ],
+      "opinions": [
+        "报道提到高估值AI和半导体个股承压，部分资金转向此前涨幅落后的板块。"
+      ],
+      "evidence": [
+        {
+          "id": "ev-nikkei-xinhua-20260824",
+          "kind": "market_report",
+          "text": "新华财经8月24日报道：日经225收盘下跌0.74%至65528.09点，东证指数上涨0.15%至4073.29点；报道提到高估值AI和半导体股承压。",
+          "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkzxw2937285.shtml",
+          "published_at": "2026-08-24T16:04:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "日经225跌0.74%，东证指数涨0.15%。",
+      "credibility": 0.84,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.05,
+      "relevance_to_astock": 0.6,
+      "relevance_to_content": 0.62,
+      "risk_flags": [
+        "overseas_signal_not_direct_causality"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-012",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 47.6,
+      "priority_components": {
+        "startup": 0.05,
+        "astock": 0.6,
+        "content": 0.62,
+        "credibility": 0.84,
+        "freshness": 0.715216049382716,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "hsi-close-hkcna-20260824",
+      "title": "恒生指数8月24日下跌1.89%，报25517.33点",
+      "summary": "香港中通社报道8月24日恒生指数跌492.13点至25517.33点，跌幅1.89%，主板成交约2911.51亿港元。",
+      "published_at": "2026-08-24T16:42:00+08:00",
+      "source": "香港中通社",
+      "url": "https://hkcna.hk/h5/docDetail.jsp?channel=2812&id=101403276",
+      "canonical_url": "https://hkcna.hk/h5/docDetail.jsp?channel=2812&id=101403276",
+      "author": "香港中通社",
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "中国香港",
+      "entities": [
+        "恒生指数",
+        "香港主板"
+      ],
+      "topics": [
+        "港股",
+        "海外市场",
+        "风险偏好"
+      ],
+      "facts": [
+        "恒生指数收报25517.33点，下跌492.13点，跌幅1.89%。",
+        "主板全天成交约2911.51亿港元。"
+      ],
+      "opinions": [],
+      "evidence": [
+        {
+          "id": "ev-hsi-close-hkcna-20260824",
+          "kind": "market_report",
+          "text": "香港中通社8月24日报道：恒生指数收报25517.33点，跌492.13点、跌幅1.89%；主板全天成交约2911.51亿港元。",
+          "url": "https://hkcna.hk/h5/docDetail.jsp?channel=2812&id=101403276",
+          "published_at": "2026-08-24T16:42:00+08:00",
+          "verified": true
+        }
+      ],
+      "excerpt": "恒生指数报25517.33点，跌1.89%。",
+      "credibility": 0.84,
+      "content_type": "fact",
+      "access_status": "ok",
+      "relevance_to_startup": 0.05,
+      "relevance_to_astock": 0.58,
+      "relevance_to_content": 0.58,
+      "risk_flags": [
+        "hong_kong_signal_not_direct_causality"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-013",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 1,
+      "priority": 46.79,
+      "priority_components": {
+        "startup": 0.05,
+        "astock": 0.58,
+        "content": 0.58,
+        "credibility": 0.84,
+        "freshness": 0.7240123456790124,
+        "cross_source": 0.0,
+        "evidence_quality": 0.5
+      },
+      "priority_penalties": {}
+    },
+    {
+      "item_id": "last30days-instagram-failure-20260824",
+      "title": "last30days：Instagram近一日查询受限",
+      "summary": "近一日研究引擎记录Instagram HTTP 402；未把受限结果当作事实。",
+      "published_at": null,
+      "source": "Instagram",
+      "url": "https://www.instagram.com/",
+      "canonical_url": "https://www.instagram.com/",
+      "author": null,
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "source_failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "Instagram HTTP 402，未形成可核验资讯。",
+      "credibility": 0.1,
+      "content_type": "speculation",
+      "access_status": "rate_limited",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_rate_limited",
+        "no_verified_evidence",
+        "source_failure"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-017",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.1,
+        "freshness": 0.25,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "last30days-tiktok-failure-20260824",
+      "title": "last30days：TikTok近一日查询受限",
+      "summary": "近一日研究引擎记录TikTok HTTP 402；未把受限结果当作事实。",
+      "published_at": null,
+      "source": "TikTok",
+      "url": "https://www.tiktok.com/",
+      "canonical_url": "https://www.tiktok.com/",
+      "author": null,
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "source_failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "TikTok HTTP 402，未形成可核验资讯。",
+      "credibility": 0.1,
+      "content_type": "speculation",
+      "access_status": "rate_limited",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_rate_limited",
+        "no_verified_evidence",
+        "source_failure"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-016",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.1,
+        "freshness": 0.25,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "last30days-x-failure-20260824",
+      "title": "last30days：X/Twitter近一日查询失败",
+      "summary": "近一日研究引擎记录X/Twitter查询错误；没有把未取得的社交内容当作事实。",
+      "published_at": null,
+      "source": "X/Twitter",
+      "url": "https://x.com/",
+      "canonical_url": "https://x.com/",
+      "author": null,
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "source_failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "X/Twitter查询错误，未形成可核验资讯。",
+      "credibility": 0.1,
+      "content_type": "speculation",
+      "access_status": "network_error",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_network_error",
+        "no_verified_evidence",
+        "source_failure"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-014",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.1,
+        "freshness": 0.25,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    },
+    {
+      "item_id": "last30days-youtube-failure-20260824",
+      "title": "last30days：YouTube近一日查询未通过认证",
+      "summary": "近一日研究引擎记录YouTube认证失败；没有把视频标题或评论摘要当作事实。",
+      "published_at": null,
+      "source": "YouTube",
+      "url": "https://www.youtube.com/",
+      "canonical_url": "https://www.youtube.com/",
+      "author": null,
+      "collected_at": "2026-08-25T04:49:28Z",
+      "language": "zh-CN",
+      "region": "global",
+      "entities": [],
+      "topics": [
+        "source_failure"
+      ],
+      "facts": [],
+      "opinions": [],
+      "evidence": [],
+      "excerpt": "YouTube认证失败，未形成可核验资讯。",
+      "credibility": 0.1,
+      "content_type": "speculation",
+      "access_status": "login_required",
+      "relevance_to_startup": 0.0,
+      "relevance_to_astock": 0.0,
+      "relevance_to_content": 0.0,
+      "risk_flags": [
+        "access_login_required",
+        "no_verified_evidence",
+        "source_failure"
+      ],
+      "cross_source_refs": [],
+      "dedup_cluster_id": "cluster-015",
+      "dedupe_reasons": [],
+      "source_count": 1,
+      "evidence_count": 0,
+      "priority": 0.0,
+      "priority_components": {
+        "startup": 0.0,
+        "astock": 0.0,
+        "content": 0.0,
+        "credibility": 0.1,
+        "freshness": 0.25,
+        "cross_source": 0.0,
+        "evidence_quality": 0.0
+      },
+      "priority_penalties": {
+        "no_verified_evidence": 15.0,
+        "source_unavailable": 25.0
+      }
+    }
+  ]
+}
