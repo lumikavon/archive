@@ -1,0 +1,103 @@
+# Common file rules
+#
+# Keep text normalized in the repository and make binary files safe from
+# line-ending conversion or text-diff heuristics.
+
+# Default: detect text files and normalize them to LF in the index.
+* text=auto
+
+# Documents and data
+*.bibtex text diff=bibtex
+*.doc diff=astextplain
+*.DOC diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot diff=astextplain
+*.DOT diff=astextplain
+*.pdf diff=astextplain
+*.PDF diff=astextplain
+*.rtf diff=astextplain
+*.RTF diff=astextplain
+*.md text diff=markdown
+*.mdx text diff=markdown
+*.tex text diff=tex
+*.adoc text
+*.textile text
+*.mustache text
+*.csv text eol=crlf
+*.tab text
+*.tsv text
+*.txt text
+*.sql text
+*.epub diff=astextplain
+*.xls binary
+*.xlsx binary
+*.xlsm binary
+
+# Web and serialized text
+*.html text
+*.htm text
+*.css text
+*.js text
+*.mjs text
+*.cjs text
+*.json text
+*.toml text
+*.xml text
+*.yaml text
+*.yml text
+*.svg text
+
+# Graphics
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.tif binary
+*.tiff binary
+*.ico binary
+*.icns binary
+*.bmp binary
+*.webp binary
+*.avif binary
+*.eps binary
+
+# Shell scripts use LF; Windows scripts use CRLF.
+*.bash text eol=lf
+*.fish text eol=lf
+*.ksh text eol=lf
+*.sh text eol=lf
+*.zsh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Archives
+*.7z binary
+*.bz binary
+*.bz2 binary
+*.bzip2 binary
+*.gz binary
+*.lz binary
+*.lzma binary
+*.rar binary
+*.tar binary
+*.taz binary
+*.tbz binary
+*.tbz2 binary
+*.tgz binary
+*.tlz binary
+*.txz binary
+*.xz binary
+*.Z binary
+*.zip binary
+*.zst binary
+
+# Preserve line endings in patches.
+*.patch -text
+
+# Repository metadata is not included in source archives.
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore
+CNAME text eol=lf
