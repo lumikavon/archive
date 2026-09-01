@@ -10,18 +10,10 @@
 - 语言：中文旁白与节奏尾句＋英式英语音标和示例单词
 - 结构：教师领读、儿童合唱回应、分段副歌、轻快教学串烧
 
-## Style of Music 提示词
+## Style of Music 融合提示词（978字符）
 
 ```text
-Create a long-form Mandarin Chinese preschool educational sing-along and phonics chant, bright acoustic nursery pop, 108 BPM, C major, 4/4 time. Use a warm, patient female teacher as the lead voice and a small cheerful children's choir for call-and-response. The teacher introduces each target sound; the children repeat the target sound exactly three times, then repeat each English example word exactly three times. Use clear standard British English pronunciation, slow and highly articulated diction, short pauses between repeated words, and slightly stronger emphasis on the target phoneme. Keep the Chinese lines natural, friendly, rhythmic, and easy for children aged 4–9 to follow.
-
-Arrange the song as a playful educational medley with five clearly separated learning sections, a recurring catchy chorus, and brief instrumental transitions. Use ukulele, acoustic guitar, glockenspiel, xylophone, handclaps, finger snaps, light kick and snare, soft bass, and occasional toy percussion. Keep the melody simple, repetitive, memorable, and within a comfortable children's singing range. Use spoken-sung call-and-response rather than fast rap. Preserve every lyric and every repeated word exactly as written; do not skip, merge, replace, translate, or invent example words. Leave enough rhythmic space for pronunciation practice. End with a joyful recap and a clean musical ending. Target duration: 7 to 8 minutes.
-```
-
-## Exclude Styles 建议
-
-```text
-fast rap, trap, EDM drops, hard rock, distorted guitars, heavy bass, aggressive drums, dramatic belting, melisma, whisper vocals, vocal chops, excessive reverb, heavy autotune, crowded arrangement, background chatter, very fast tempo, dark mood
+Mandarin preschool phonics sing-along, bright acoustic nursery pop, 108 BPM, C major, 4/4. Warm female teacher leads; cheerful child choir responds. Each target sound exactly 3 times, then each English example word exactly 3 times. Clear standard British English, slow precise diction, brief pauses, target phonemes emphasized; friendly rhythmic Chinese for ages 4–9. Five learning sections, recurring catchy chorus, short transitions, simple repetitive melody in a child-friendly range. Ukulele, acoustic guitar, glockenspiel, xylophone, handclaps, light drums, soft bass, toy percussion. Spoken-sung and unhurried. Preserve lyrics exactly: never skip, merge, replace, translate or invent words. Leave space for pronunciation. Joyful recap, clean ending, 7–8 minutes. Avoid fast rap, trap, EDM drops, hard rock, distortion, heavy bass, aggressive drums, belting, melisma, whispers, vocal chops, excess reverb, heavy autotune, crowded mix, chatter, very fast tempo or dark mood.
 ```
 
 ## Custom Lyrics 完整歌词
